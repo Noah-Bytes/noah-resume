@@ -6,14 +6,14 @@
 
 ## 功能概览
 
-| 能力 | 说明 |
-|------|------|
-| **单页分区** | Hero、关于、技术栈、工作经历、项目精选、教育、联系；顶部导航与滚动联动 |
-| **内容数据源** | `lib/meta.json`（站点 SEO、`resume` 履历、`ui` 界面文案） |
-| **类型收窄** | `lib/meta.ts` 导出默认 meta，修正 JSON 导入导致的 `openGraph.type` 字面量类型 |
-| **动效** | `tw-animate-css` 入场动画；区块内 `Reveal` / `animate-in` 等 |
-| **打印** | Header「PDF」与联系区按钮触发浏览器打印（可用「另存为 PDF」） |
-| **分析** | 生产环境挂载 `@vercel/analytics` |
+| 能力           | 说明                                                                          |
+| -------------- | ----------------------------------------------------------------------------- |
+| **单页分区**   | Hero、关于、技术栈、工作经历、项目精选、教育、联系；顶部导航与滚动联动        |
+| **内容数据源** | `lib/meta.json`（站点 SEO、`resume` 履历、`ui` 界面文案）                     |
+| **类型收窄**   | `lib/meta.ts` 导出默认 meta，修正 JSON 导入导致的 `openGraph.type` 字面量类型 |
+| **动效**       | `tw-animate-css` 入场动画；区块内 `Reveal` / `animate-in` 等                  |
+| **打印**       | Header「PDF」与联系区按钮触发浏览器打印（可用「另存为 PDF」）                 |
+| **分析**       | 生产环境挂载 `@vercel/analytics`                                              |
 
 ---
 
@@ -56,12 +56,12 @@ pnpm start
 
 ## 脚本说明
 
-| 命令 | 作用 |
-|------|------|
-| `pnpm dev` | 启动开发服务器 |
-| `pnpm build` | 生产构建 |
-| `pnpm start` | 运行构建产物 |
-| `pnpm fmt` | `biome format --write` 格式化仓库 |
+| 命令         | 作用                              |
+| ------------ | --------------------------------- |
+| `pnpm dev`   | 启动开发服务器                    |
+| `pnpm build` | 生产构建                          |
+| `pnpm start` | 运行构建产物                      |
+| `pnpm fmt`   | `biome format --write` 格式化仓库 |
 
 ---
 
@@ -123,13 +123,13 @@ biome.json
 }
 ```
 
-| 区域 | 用途 |
-|------|------|
-| **`site.metadata`** | `<title>`、`description`、`keywords`、`authors`、`openGraph`（标题、描述、`type: "profile"`） |
-| **`resume.profile`** | 姓名、联系方式、`tagline`、`summary`、`manifesto` 等 |
-| **`resume.jobIntent`** | 求职意向：侧栏 Role、Open to 文案、联系区高亮方向等 |
-| **`resume.*` 其余** | 数据区块：统计、技能分组、经历、项目、跑马灯词条、教育 |
-| **`ui.*`** | 各 Section 的 eyebrow、标题拆字、描述、表格头等纯展示文案 |
+| 区域                   | 用途                                                                                          |
+| ---------------------- | --------------------------------------------------------------------------------------------- |
+| **`site.metadata`**    | `<title>`、`description`、`keywords`、`authors`、`openGraph`（标题、描述、`type: "profile"`） |
+| **`resume.profile`**   | 姓名、联系方式、`tagline`、`summary`、`manifesto` 等                                          |
+| **`resume.jobIntent`** | 求职意向：侧栏 Role、Open to 文案、联系区高亮方向等                                           |
+| **`resume.*` 其余**    | 数据区块：统计、技能分组、经历、项目、跑马灯词条、教育                                        |
+| **`ui.*`**             | 各 Section 的 eyebrow、标题拆字、描述、表格头等纯展示文案                                     |
 
 修改 JSON 后无需改 `meta.ts`，除非新增字段需要 TypeScript 层面的字面量收窄（当前仅对 `openGraph.type` 做了 `profile` 断言）。
 
@@ -183,9 +183,3 @@ pnpm dlx shadcn@latest add button
 - [shadcn/ui](https://ui.shadcn.com)
 - [Biome](https://biomejs.dev)
 - [tw-animate-css](https://github.com/Wombosvideo/tw-animate-css)
-
----
-
-## 许可证
-
-若仓库未单独声明许可证文件，默认以仓库所有者配置为准；对外开源时请补充 `LICENSE`。
