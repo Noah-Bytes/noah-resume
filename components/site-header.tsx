@@ -8,7 +8,7 @@ const { resume, ui } = meta;
 const { profile } = resume;
 
 export function SiteHeader() {
-	const { navigation: navItems, header } = ui;
+	const { navigation: navItems, header, resumePdf } = ui;
 	const [active, setActive] = React.useState<string>("about");
 	const [scrolled, setScrolled] = React.useState(false);
 
@@ -112,15 +112,15 @@ export function SiteHeader() {
 					>
 						{profile.email}
 					</a>
-					<button
-						type="button"
-						onClick={() => window.print()}
+					<a
+						href={encodeURI(resumePdf.path)}
+						download={resumePdf.downloadFilename}
 						className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-3.5 py-1.5 text-xs font-medium text-background transition-opacity hover:opacity-90"
 						aria-label={header.printAriaLabel}
 					>
 						<span className="font-mono">{header.pdfLabel}</span>
 						<span aria-hidden>↓</span>
-					</button>
+					</a>
 				</div>
 			</div>
 		</header>

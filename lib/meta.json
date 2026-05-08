@@ -181,13 +181,10 @@
 				"current": true,
 				"meta": "Electron · 插件运行时 · 分布式算力",
 				"highlights": [
-					"负责分布式算力桌面客户端，覆盖 Electron 主进程、插件生命周期、自动更新、系统托盘、多窗口与远程 Web UI 集成",
-					"负责插件运行时（cc-plugin-base）与 Keeper 守护进程（cc-plugin-keeper）设计与联调，覆盖任务调度、子进程托管、崩溃隔离、硬件控制、电源管理、WSL 与本地控制面 HTTP API",
-					"负责 desktop-helper 远程终端中继方案，实现基于 Socket.IO 与 xterm 的远程 Shell 操作能力，支持管理端远程维护桌面节点",
-					"负责桌面端插件系统通信边界设计，协同 IPC、本地 HTTP API、Keeper 子进程与 Electron 主进程之间的数据与生命周期管理",
-					"负责 cc-next-cloud、cc-provider、cc-provider-app、cc-admin 等多端系统完成 API 对接与发布链路交付，覆盖 OSS/CDN、安装包分发与缓存预热",
-					"负责 OpenAPI 文档体系与 ComfyUI API 文档化方案，支持 Fumadocs + OpenAPI Playground 联调与开发者体验建设",
-					"负责 monorepo 模式，支持 Electron、Next.js、NestJS 与 AI 工作流相关系统的问题定位与跨仓联调"
+					"负责分布式算力桌面客户端与插件侧能力建设，参与 Electron、NestJS 与多端 Web 系统协同开发",
+					"负责插件运行时、Keeper 守护进程与远程终端相关模块开发，覆盖任务调度、进程托管与节点运维等能力",
+					"负责云控制台、Provider、管理端与桌面端完成 API 联调、发布链路与多端交付",
+					"负责 OpenAPI 文档体系、ComfyUI API 文档化与 monorepo 多仓协作开发"
 				]
 			},
 			{
@@ -224,13 +221,12 @@
 				"tagline": "Electron Infrastructure · Plugin Runtime · AI Workflow",
 				"description": "面向分布式算力与 AI 工作流场景的 Electron 桌面基础设施，覆盖插件运行时、远程终端、云控制台、多端 Web 与 OpenAPI 文档体系。",
 				"highlights": [
-					"负责 Electron 桌面端插件系统与运行时架构，覆盖 IPC、主进程、Keeper 子进程、本地 HTTP API 与远程 Web UI 通信边界",
-					"实现自动更新、系统托盘、多窗口、协议处理与桌面壳内 SPA 集成等桌面能力",
-					"负责 cc-plugin-base 与 cc-plugin-keeper 的任务调度、插件生命周期、子进程托管与崩溃恢复能力建设",
-					"负责基于 Socket.IO + xterm 的 desktop-helper 远程终端中继方案，实现远程 Shell 运维与节点管理",
-					"负责 cc-next-cloud 云控制台与 ComfyUI 工作空间联调，覆盖 Serverless 容器、工作流、日志与 OpenAPI 文档展示",
-					"负责 OpenAPI + Fumadocs 文档体系建设，支持 Playground、多语言 API 文档与 ComfyUI API 门面文档化",
-					"负责桌面端与 Web 多端发布链路，覆盖 OSS/CDN、安装包分发与 CDN 缓存预热"
+					"设计 Electron 主进程、IPC、本地 HTTP API 与 Keeper 子进程之间的插件通信边界",
+					"负责插件运行时与守护进程体系，实现插件生命周期管理、崩溃隔离与任务调度",
+					"实现 Socket.IO + xterm 远程终端中继，支持管理端远程维护桌面节点",
+					"实现自动更新、系统托盘、多窗口与桌面壳内 SPA 集成等桌面端能力",
+					"负责 ComfyUI 工作空间与 OpenAPI 文档体系集成，支持 Playground 与 API 门面文档化",
+					"负责桌面端与 Web 多端发布链路，包括 OSS/CDN、安装包分发与缓存预热"
 				],
 				"stack": [
 					"Electron",
@@ -475,10 +471,14 @@
 				"num": "05"
 			}
 		],
+		"resumePdf": {
+			"path": "/Noah_杨晨-高级全栈_Electron 架构.pdf",
+			"downloadFilename": "Noah_杨晨-高级全栈_Electron 架构.pdf"
+		},
 		"header": {
 			"roleSubtitle": "full-stack engineer",
 			"navAriaLabel": "主导航",
-			"printAriaLabel": "打印 / 导出 PDF",
+			"printAriaLabel": "下载 PDF 简历",
 			"pdfLabel": "PDF"
 		},
 		"hero": {

@@ -78,7 +78,7 @@ export function HeroSection() {
 								{profile.tagline}
 							</span>
 							<span className="mt-1 block text-base md:mt-2 md:text-lg">
-								{profile.taglineCN}。{hero.bioContinuation}
+								{hero.bioContinuation}
 							</span>
 						</p>
 
