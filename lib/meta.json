@@ -1,0 +1,575 @@
+{
+	"site": {
+		"metadata": {
+			"title": "杨晨 Noah · 高级全栈 / Electron 架构师",
+			"description": "11 年研发经验，6 年团队管理经验。专注 Electron、React、Next.js、NestJS 全栈架构与工程落地，擅长插件化架构、桌面端基础设施与 AI 工具开发。",
+			"keywords": [
+				"杨晨",
+				"Noah",
+				"全栈工程师",
+				"Senior Full-stack Engineer",
+				"Electron Engineer",
+				"Electron Infrastructure",
+				"React",
+				"Next.js",
+				"NestJS",
+				"TypeScript",
+				"AI Infrastructure"
+			],
+			"authors": [
+				{
+					"name": "杨晨 Noah"
+				}
+			],
+			"openGraph": {
+				"title": "杨晨 Noah · Senior Full-stack / Electron Infrastructure Engineer",
+				"description": "11 年研发经验 · Electron 基础设施 · 全栈架构 · AI 工具工程",
+				"type": "profile"
+			}
+		}
+	},
+	"resume": {
+		"profile": {
+			"name": "杨晨",
+			"englishName": "Noah",
+			"tagline": "Building scalable desktop and full-stack systems since 2014.",
+			"taglineCN": "11 年研发 · 6 年团队管理 · Electron 与全栈基础设施方向",
+			"location": "西安 · Xi'an",
+			"phone": "15968159540",
+			"email": "yangchen.xiyou@gmail.com",
+			"github": "https://github.com/Noah-Bytes",
+			"currentlyBuilding": "CrowdComputed · 分布式算力桌面客户端",
+			"summary": "拥有 11 年研发经验，长期负责 Electron、React、Next.js、NestJS 全栈系统架构与工程落地。深度参与多个桌面端、商家 SaaS、AI 工具与分布式系统从 0 到 1 建设，具备插件化架构、运行时设计、工程体系与跨团队协作经验。",
+			"manifesto": [
+				{
+					"title": "从 0 到 1 的工程架构",
+					"body": "长期负责桌面端、SaaS 与 AI 工具系统的架构设计与工程落地，关注系统可扩展性、工程边界与长期维护成本。"
+				},
+				{
+					"title": "面向业务结果的工程实践",
+					"body": "参与构建的产品累计服务超 100 万商家，覆盖淘宝、拼多多、饿了么、美团等多个业务场景，具备复杂业务系统的工程化与交付经验。"
+				}
+			]
+		},
+		"jobIntent": {
+			"eyebrow": "Role · 求职意向",
+			"headline": "高级全栈 / Electron 架构师",
+			"openToEn": "Senior Full-stack / Electron Infrastructure Engineer",
+			"directionCN": "高级全栈 / Electron 架构师"
+		},
+		"stats": [
+			{
+				"label": "Years building",
+				"value": "11",
+				"suffix": "年",
+				"caption": "since 2014"
+			},
+			{
+				"label": "Years leading",
+				"value": "6",
+				"suffix": "年",
+				"caption": "前 / 后 / 测 跨职能"
+			},
+			{
+				"label": "Merchants served",
+				"value": "100",
+				"suffix": "万+",
+				"caption": "商家覆盖"
+			},
+			{
+				"label": "Business GMV",
+				"value": "390",
+				"suffix": "亿+",
+				"caption": "服务业务累计成交规模"
+			}
+		],
+		"skillGroups": [
+			{
+				"title": "Core",
+				"titleCN": "核心框架与语言",
+				"items": [
+					"TypeScript",
+					"React",
+					"Next.js",
+					"NestJS",
+					"Electron",
+					"Node.js"
+				]
+			},
+			{
+				"title": "Stack",
+				"titleCN": "前端工程化",
+				"items": [
+					"Tailwind CSS",
+					"shadcn/ui",
+					"Ant Design",
+					"Redux",
+					"MobX",
+					"Zustand",
+					"TanStack Query",
+					"TanStack Table",
+					"React Flow",
+					"Vite",
+					"Webpack",
+					"Nx",
+					"TurboRepo",
+					"Jest",
+					"Biome"
+				]
+			},
+			{
+				"title": "Electron",
+				"titleCN": "Electron 基础设施",
+				"items": [
+					"IPC",
+					"Plugin Runtime",
+					"Multi-process Architecture",
+					"Auto Update",
+					"Worker Threads",
+					"Tray & Native Integration",
+					"Local-first Architecture",
+					"Task Scheduling"
+				]
+			},
+			{
+				"title": "AI & Automation",
+				"titleCN": "AI 与自动化工程",
+				"items": [
+					"Vercel AI SDK",
+					"LangChain",
+					"LangGraph",
+					"Langfuse",
+					"Prompt Workflow",
+					"Browser Automation",
+					"RAG",
+					"YOLOv8",
+					"PaddleOCR",
+					"FFmpeg",
+					"逆向工程"
+				]
+			},
+			{
+				"title": "Infrastructure",
+				"titleCN": "架构与基础设施",
+				"items": [
+					"Monorepo (Nx/TurboRepo)",
+					"分布式 / 微服务",
+					"MySQL",
+					"PostgreSQL",
+					"Prisma",
+					"TypeORM",
+					"Redis",
+					"MQ",
+					"Docker",
+					"Kubernetes",
+					"CI/CD",
+					"AWS",
+					"Vercel"
+				]
+			},
+			{
+				"title": "Also familiar",
+				"titleCN": "其他技术储备",
+				"items": ["Vue.js", "Angular", "React Native", "Java", "Web3 / Ethers"]
+			}
+		],
+		"experiences": [
+			{
+				"company": "群计（北京）科技 · CrowdComputed",
+				"role": "客户端应用开发工程师",
+				"period": "2024.08 — 至今",
+				"current": true,
+				"meta": "Electron · 插件运行时 · 分布式算力",
+				"highlights": [
+					"负责分布式算力桌面客户端，覆盖 Electron 主进程、插件生命周期、自动更新、系统托盘、多窗口与远程 Web UI 集成",
+					"负责插件运行时（cc-plugin-base）与 Keeper 守护进程（cc-plugin-keeper）设计与联调，覆盖任务调度、子进程托管、崩溃隔离、硬件控制、电源管理、WSL 与本地控制面 HTTP API",
+					"负责 desktop-helper 远程终端中继方案，实现基于 Socket.IO 与 xterm 的远程 Shell 操作能力，支持管理端远程维护桌面节点",
+					"负责桌面端插件系统通信边界设计，协同 IPC、本地 HTTP API、Keeper 子进程与 Electron 主进程之间的数据与生命周期管理",
+					"负责 cc-next-cloud、cc-provider、cc-provider-app、cc-admin 等多端系统完成 API 对接与发布链路交付，覆盖 OSS/CDN、安装包分发与缓存预热",
+					"负责 OpenAPI 文档体系与 ComfyUI API 文档化方案，支持 Fumadocs + OpenAPI Playground 联调与开发者体验建设",
+					"负责 monorepo 模式，支持 Electron、Next.js、NestJS 与 AI 工作流相关系统的问题定位与跨仓联调"
+				]
+			},
+			{
+				"company": "杭州商擎科技有限公司",
+				"role": "技术合伙人",
+				"period": "2022.11 — 2024.07",
+				"meta": "工具型 SaaS · 桌面端 · 视觉算法",
+				"highlights": [
+					"负责多个 Electron 桌面工具与商家 SaaS 系统从 0 到 1 架构与交付",
+					"推动 Nx Monorepo、配置化表单与插件化机制落地，降低多项目维护成本",
+					"主导 AI 素材工具与视频检测项目开发，覆盖 YOLO、FFmpeg、PaddleOCR 等工程实践",
+					"负责桌面端多应用隔离、镜像代理、自动更新与本地部署方案"
+				]
+			},
+			{
+				"company": "杭州光云科技股份有限公司",
+				"role": "前端开发工程师 / 技术经理",
+				"period": "2014.06 — 2021.11",
+				"meta": "电商 SaaS · 团队搭建",
+				"highlights": [
+					"参与淘宝、拼多多、饿了么、美团等多个商家 SaaS 产品研发与架构升级",
+					"负责前端 7 人、后端 5 人、测试 2 人团队协作与研发流程推进",
+					"推动 React、TypeScript、Webpack、Electron 等技术栈在业务团队落地",
+					"建设前端监控系统与 CI/CD 流程，降低线上问题与技术类客诉",
+					"自研 Mvc.js 框架与高复用组件体系，提升研发效率与业务交付速度"
+				]
+			}
+		],
+		"projects": [
+			{
+				"name": "分布式算力桌面",
+				"role": "Senior Full-stack / Electron Infrastructure Engineer",
+				"period": "2024.08 — 至今",
+				"tagline": "Electron Infrastructure · Plugin Runtime · AI Workflow",
+				"description": "面向分布式算力与 AI 工作流场景的 Electron 桌面基础设施，覆盖插件运行时、远程终端、云控制台、多端 Web 与 OpenAPI 文档体系。",
+				"highlights": [
+					"负责 Electron 桌面端插件系统与运行时架构，覆盖 IPC、主进程、Keeper 子进程、本地 HTTP API 与远程 Web UI 通信边界",
+					"实现自动更新、系统托盘、多窗口、协议处理与桌面壳内 SPA 集成等桌面能力",
+					"负责 cc-plugin-base 与 cc-plugin-keeper 的任务调度、插件生命周期、子进程托管与崩溃恢复能力建设",
+					"负责基于 Socket.IO + xterm 的 desktop-helper 远程终端中继方案，实现远程 Shell 运维与节点管理",
+					"负责 cc-next-cloud 云控制台与 ComfyUI 工作空间联调，覆盖 Serverless 容器、工作流、日志与 OpenAPI 文档展示",
+					"负责 OpenAPI + Fumadocs 文档体系建设，支持 Playground、多语言 API 文档与 ComfyUI API 门面文档化",
+					"负责桌面端与 Web 多端发布链路，覆盖 OSS/CDN、安装包分发与 CDN 缓存预热"
+				],
+				"stack": [
+					"Electron",
+					"TypeScript",
+					"NestJS",
+					"Next.js",
+					"Socket.IO",
+					"Express",
+					"OpenAPI",
+					"Fumadocs",
+					"IPC",
+					"Monorepo",
+					"Node.js"
+				],
+				"metrics": [
+					{
+						"label": "协作仓库",
+						"value": "10+"
+					},
+					{
+						"label": "覆盖系统",
+						"value": "13+"
+					},
+					{
+						"label": "核心方向",
+						"value": "基础设施"
+					}
+				],
+				"featured": true
+			},
+			{
+				"name": "超级快车（淘宝）",
+				"role": "前端开发工程师",
+				"period": "2014 — 2021",
+				"tagline": "淘宝头部广告优化软件",
+				"description": "面向淘宝卖家的广告优化 SaaS 平台，覆盖广告投放、数据分析、创意管理与自动优化等场景。",
+				"highlights": [
+					"负责前端架构升级与工程体系建设，推动 React、TypeScript、Webpack 等技术落地",
+					"自研高复用组件体系与前端监控系统，提升研发效率与稳定性",
+					"参与 5 次大版本迭代，支撑复杂业务持续演进",
+					"服务业务累计覆盖 30 万+ 商家与 390 亿+ GMV 规模"
+				],
+				"stack": [
+					"React",
+					"Ant Design",
+					"Webpack",
+					"Electron",
+					"Umi",
+					"Next.js",
+					"Vue",
+					"Angular"
+				],
+				"metrics": [
+					{
+						"label": "服务商家",
+						"value": "30 万+"
+					},
+					{
+						"label": "成交金额",
+						"value": "390 亿+"
+					},
+					{
+						"label": "行业排名",
+						"value": "TOP 3"
+					}
+				],
+				"featured": true
+			},
+
+			{
+				"name": "神龙架景区视频检测",
+				"role": "图像算法",
+				"period": "2024.06 — 2024.07",
+				"tagline": "CV 视频分类裁剪",
+				"description": "基于计算机视觉的视频分类与裁剪系统，覆盖视频流采集、帧级计算与边界识别。",
+				"highlights": [
+					"基于 YOLO 与 PaddleOCR 实现视频目标检测与文本识别",
+					"设计流式视频处理与重试机制，保证视频完整性与稳定性",
+					"通过数据增强与滑动窗口策略提升分类准确率",
+					"实现 FFmpeg 自动化处理与视频裁剪流程"
+				],
+				"stack": ["YOLOv8", "FFmpeg", "PaddleOCR", "Python", "React"]
+			},
+			{
+				"name": "创意智流",
+				"role": "全栈工程师",
+				"period": "2024.04 — 2024.06",
+				"tagline": "AI 素材与桌面工具",
+				"description": "基于 Electron 的 AI 素材桌面工具，支持本地 / 云部署、镜像代理、多应用隔离与素材工作流。",
+				"highlights": [
+					"设计插件 Loader 与 Action Runtime 机制，实现多应用扩展能力",
+					"基于 Nx Monorepo 构建跨模块工程体系与共享能力",
+					"实现镜像代理与 pip/conda 网络加速方案，优化 AI 工具部署体验",
+					"支持本地部署、云算力与素材收集工作流"
+				],
+				"stack": ["Electron", "React", "NestJS", "Nx", "Tailwind CSS", "MobX"]
+			},
+			{
+				"name": "速麦掌柜",
+				"role": "前端开发工程师",
+				"period": "2023.07 — 2024.04",
+				"tagline": "拼多多商家工具",
+				"description": "面向拼多多商家的商品 / 营销 / 广告优化管理工具，攻克服务本地化、首页加载、分销贴牌难题。",
+				"highlights": [
+					"插件服务机制：动态管理 Node、Java 等多种服务",
+					"Service Worker 缓存 + 动态打包，实现软件裂变"
+				],
+				"stack": ["Electron", "React", "NestJS", "Umi", "Ant Design", "C++"]
+			},
+			{
+				"name": "易用代发",
+				"role": "全栈工程师",
+				"period": "2022.11 — 2023.12",
+				"tagline": "多平台代发系统",
+				"description": "实现多平台一键代发商品 / 订单 / 售后 / 物流。攻克多端逻辑适配、多项目维护成本难题。",
+				"highlights": [
+					"umi 多环境 + 多发布流 + 模块抽象：从多项目变为单项目维护",
+					"约定式表单配置 + 自定义 FormItem + 权限控制"
+				],
+				"stack": ["React", "Ant Design", "Umi", "Spring Boot"]
+			},
+			{
+				"name": "爆单宝（饿了么 / 美团）",
+				"role": "前端 / 技术经理",
+				"period": "2018 — 2021",
+				"tagline": "本地生活 SaaS",
+				"description": "面向饿了么 / 美团商家的 SaaS 软件，覆盖进店、下单、派送、装修、数据等 30+ 功能场景。",
+				"highlights": [
+					"4 个月做到饿了么行业 TOP 1，美团也做到 TOP 1",
+					"引入 Electron 比 Deadline 提前 30% 上线",
+					"周边产品：饭团（支付宝小程序）、爆大师工作台"
+				],
+				"stack": ["React", "Redux-Saga", "Electron", "Highcharts", "Lottie"],
+				"metrics": [
+					{
+						"label": "饿了么",
+						"value": "TOP 1"
+					},
+					{
+						"label": "美团",
+						"value": "TOP 1"
+					},
+					{
+						"label": "服务商家",
+						"value": "60 万+"
+					}
+				]
+			},
+			{
+				"name": "推广宝（拼多多）",
+				"role": "技术经理",
+				"period": "2018 — 2021",
+				"tagline": "拼多多广告优化",
+				"description": "面向拼多多商家的广告优化系统：计划、单元、创意，支持自动调价、创意测试、自动托管。",
+				"highlights": ["2 个月上线第一版", "对接拼多多技术 + 跨云服务调用"],
+				"stack": ["React", "Ant Design", "Webpack", "Node.js"],
+				"metrics": [
+					{
+						"label": "服务商家",
+						"value": "20 万"
+					},
+					{
+						"label": "行业排名",
+						"value": "TOP 3"
+					}
+				]
+			},
+			{
+				"name": "快麦 CRM",
+				"role": "技术经理",
+				"period": "2021.04 — 2021.11",
+				"tagline": "淘宝卖家 CRM",
+				"description": "淘宝卖家 CRM SaaS：客户管理、会员营销、订单关怀、数据分析。3 个月完成前端 web 到千牛端技术改造。",
+				"highlights": [
+					"团队效率提升 30%（流程优化 + 责任划分）",
+					"推进后端会员敏感数据加密，覆盖百亿会员"
+				],
+				"stack": ["React", "Ant Design", "Webpack", "Node.js"]
+			}
+		],
+		"techMarqueeItems": [
+			"TypeScript",
+			"React",
+			"Next.js",
+			"NestJS",
+			"Electron",
+			"Node.js",
+			"Tailwind CSS",
+			"shadcn/ui",
+			"Redux",
+			"MobX",
+			"TanStack Query",
+			"Nx",
+			"TurboRepo",
+			"Prisma",
+			"OpenAI SDK",
+			"LangChain",
+			"YOLOv8",
+			"FFmpeg",
+			"Docker",
+			"Kubernetes",
+			"AWS",
+			"PostgreSQL",
+			"Redis",
+			"Kafka",
+			"Web3",
+			"Ethers"
+		],
+		"education": {
+			"school": "西安邮电大学",
+			"schoolEN": "Xi'an University of Posts and Telecommunications",
+			"degree": "本科",
+			"major": "网络工程",
+			"period": "2010 — 2014"
+		}
+	},
+	"ui": {
+		"navigation": [
+			{
+				"id": "about",
+				"label": "关于",
+				"num": "01"
+			},
+			{
+				"id": "skills",
+				"label": "技能",
+				"num": "02"
+			},
+			{
+				"id": "experience",
+				"label": "经历",
+				"num": "03"
+			},
+			{
+				"id": "projects",
+				"label": "项目",
+				"num": "04"
+			},
+			{
+				"id": "contact",
+				"label": "联系",
+				"num": "05"
+			}
+		],
+		"header": {
+			"roleSubtitle": "full-stack engineer",
+			"navAriaLabel": "主导航",
+			"printAriaLabel": "打印 / 导出 PDF",
+			"pdfLabel": "PDF"
+		},
+		"hero": {
+			"portfolioEyebrow": "Portfolio · 个人简历",
+			"introHiPrefix": "Hi, 我是",
+			"introNameMiddle": "/",
+			"bioContinuation": "11 年研发经验，长期负责 Electron、React、Next.js、NestJS 全栈系统架构与工程落地，覆盖 AI 工具、商家 SaaS、分布式算力与桌面端应用。",
+			"openToPrefix": "Open to ·",
+			"currentlyBuildingPrefix": "currently building ·",
+			"ctaProjects": "查看精选项目",
+			"ctaContact": "联系我",
+			"asideLines": [
+				"11 年研发经验，长期专注",
+				"Electron 基础设施、桌面端架构",
+				"与全栈工程系统建设。"
+			]
+		},
+		"about": {
+			"eyebrow": "About · 关于我",
+			"titlePrefix": "专注于",
+			"titleAccent": "长期可维护",
+			"titleSuffix": "的工程系统。"
+		},
+		"skills": {
+			"eyebrow": "Stack · 技术栈",
+			"titlePrefix": "工程化的目标是",
+			"titleAccent": "降低复杂度",
+			"titleSuffix": "。",
+			"description": "覆盖前端、Electron、Node.js、AI 工具与基础设施方向，长期参与复杂业务系统与桌面端架构建设。"
+		},
+		"experience": {
+			"eyebrow": "Experience · 工作经历",
+			"titlePrefix": "11 年研发，",
+			"titleAccent": "持续一线",
+			"titleSuffix": "。",
+			"description": "从业务研发到团队管理，再到 Electron 与基础设施方向，长期保持复杂系统架构与工程实践。",
+			"sidebarEyebrow": "Career · 履历主线",
+			"sidebarRange": "2014 — Now",
+			"sidebarCaption": "全栈架构 · Electron · 工程体系",
+			"currentBadge": "current"
+		},
+		"projects": {
+			"eyebrow": "Selected work · 项目精选",
+			"titleLead": "关注",
+			"titleAccent": "复杂系统",
+			"titleTrail": "的工程落地。",
+			"description": "聚焦 Electron、AI 工具、桌面端基础设施与复杂业务系统的代表项目。",
+			"tableHeaders": {
+				"no": "/no",
+				"project": "project",
+				"tagline": "tagline",
+				"period": "period",
+				"stack": "stack"
+			},
+			"featuredBadge": "Featured · 精选",
+			"outcomeEyebrow": "Outcome",
+			"stackEyebrow": "Stack"
+		},
+		"education": {
+			"index": "/06",
+			"eyebrow": "Education"
+		},
+		"contact": {
+			"index": "/05",
+			"eyebrow": "Get in touch · 联系我",
+			"titlePrefix": "欢迎交流",
+			"titleAccent": "架构设计与全栈工程",
+			"titleSuffix": "相关机会。",
+			"bodyPrefix": "目前开放",
+			"bodySuffix": "方向机会，支持西安、杭州、北京、深圳、上海 或 Remote Work。欢迎通过邮箱或 GitHub 联系。",
+			"labels": {
+				"email": "Email · 邮箱",
+				"phone": "Phone · 电话",
+				"github": "GitHub",
+				"location": "Location · 现居"
+			},
+			"githubDisplayPath": "github.com/Noah-Bytes",
+			"copyEmail": "复制邮箱",
+			"copyPhone": "复制电话"
+		},
+		"footer": {
+			"rightsTemplate": "© {year} · all rights reserved",
+			"colophon": "Built with Next.js · Tailwind CSS · shadcn/ui"
+		},
+		"printButton": {
+			"defaultLabel": "下载 PDF 简历"
+		},
+		"copyText": {
+			"copiedAria": "已复制",
+			"copyVerbPrefix": "复制",
+			"liveCopied": "已复制到剪贴板"
+		}
+	}
+}

@@ -1,0 +1,280 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* warm paper palette + terracotta accent */
+  --background: oklch(0.975 0.008 80);
+  --foreground: oklch(0.18 0.014 55);
+  --card: oklch(0.995 0.004 80);
+  --card-foreground: oklch(0.18 0.014 55);
+  --popover: oklch(0.995 0.004 80);
+  --popover-foreground: oklch(0.18 0.014 55);
+  --primary: oklch(0.2 0.014 55);
+  --primary-foreground: oklch(0.98 0.006 80);
+  --secondary: oklch(0.94 0.01 80);
+  --secondary-foreground: oklch(0.2 0.014 55);
+  --muted: oklch(0.945 0.008 80);
+  --muted-foreground: oklch(0.46 0.012 60);
+  --accent: oklch(0.6 0.16 38);
+  --accent-foreground: oklch(0.99 0.006 80);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.88 0.008 80);
+  --input: oklch(0.88 0.008 80);
+  --ring: oklch(0.6 0.16 38);
+  --chart-1: oklch(0.6 0.16 38);
+  --chart-2: oklch(0.55 0.06 60);
+  --chart-3: oklch(0.4 0.02 60);
+  --chart-4: oklch(0.75 0.1 50);
+  --chart-5: oklch(0.85 0.04 80);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.98 0.006 80);
+  --sidebar-foreground: oklch(0.18 0.014 55);
+  --sidebar-primary: oklch(0.6 0.16 38);
+  --sidebar-primary-foreground: oklch(0.99 0.006 80);
+  --sidebar-accent: oklch(0.94 0.01 80);
+  --sidebar-accent-foreground: oklch(0.2 0.014 55);
+  --sidebar-border: oklch(0.88 0.008 80);
+  --sidebar-ring: oklch(0.6 0.16 38);
+}
+
+.dark {
+  --background: oklch(0.14 0.012 55);
+  --foreground: oklch(0.96 0.006 80);
+  --card: oklch(0.17 0.012 55);
+  --card-foreground: oklch(0.96 0.006 80);
+  --popover: oklch(0.17 0.012 55);
+  --popover-foreground: oklch(0.96 0.006 80);
+  --primary: oklch(0.96 0.006 80);
+  --primary-foreground: oklch(0.17 0.012 55);
+  --secondary: oklch(0.22 0.012 55);
+  --secondary-foreground: oklch(0.96 0.006 80);
+  --muted: oklch(0.2 0.012 55);
+  --muted-foreground: oklch(0.7 0.012 60);
+  --accent: oklch(0.7 0.16 42);
+  --accent-foreground: oklch(0.14 0.012 55);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.95 0.05 25);
+  --border: oklch(0.26 0.012 55);
+  --input: oklch(0.26 0.012 55);
+  --ring: oklch(0.7 0.16 42);
+  --chart-1: oklch(0.7 0.16 42);
+  --chart-2: oklch(0.6 0.06 60);
+  --chart-3: oklch(0.45 0.02 60);
+  --chart-4: oklch(0.75 0.1 50);
+  --chart-5: oklch(0.85 0.04 80);
+  --sidebar: oklch(0.17 0.012 55);
+  --sidebar-foreground: oklch(0.96 0.006 80);
+  --sidebar-primary: oklch(0.7 0.16 42);
+  --sidebar-primary-foreground: oklch(0.14 0.012 55);
+  --sidebar-accent: oklch(0.22 0.012 55);
+  --sidebar-accent-foreground: oklch(0.96 0.006 80);
+  --sidebar-border: oklch(0.26 0.012 55);
+  --sidebar-ring: oklch(0.7 0.16 42);
+}
+
+@theme inline {
+  /* Latin first → Chinese fallback. Browsers pick the right font per glyph:
+     Latin/digits render in Inter / JetBrains Mono / Instrument Serif,
+     CJK glyphs fall through to Noto Sans SC / Noto Serif SC. */
+  --font-sans:
+    var(--font-inter),
+    var(--font-noto-sans-sc),
+    'ui-sans-serif', 'system-ui',
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --font-mono:
+    var(--font-jetbrains-mono),
+    var(--font-noto-sans-sc),
+    'ui-monospace', 'SFMono-Regular', 'Menlo', monospace;
+  --font-serif:
+    var(--font-instrument-serif),
+    var(--font-noto-serif-sc),
+    'ui-serif', 'Songti SC', 'Source Han Serif SC', serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'ss01', 'cv11', 'cv09';
+    text-rendering: optimizeLegibility;
+  }
+  /* CJK glyphs read better with slightly tighter weight + a touch more space.
+     :lang(zh) only fires on elements explicitly tagged Chinese; we apply a
+     gentle baseline adjustment to mixed paragraphs as well. */
+  :lang(zh) {
+    font-feature-settings: 'palt', 'ss01';
+    letter-spacing: 0.01em;
+  }
+  :lang(zh) .serif-italic {
+    /* Instrument Serif italic doesn't ship CJK glyphs — fall back to Noto Serif SC,
+       which has no italic style, so we keep upright but emphasize via weight. */
+    font-style: normal;
+    font-weight: 600;
+  }
+  ::selection {
+    background-color: color-mix(in oklch, var(--accent) 28%, transparent);
+    color: var(--foreground);
+  }
+}
+
+/* ─── Utilities ─────────────────────────────────────────────────── */
+
+/* Mono tabular numerals — for stats that should never jiggle */
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum', 'ss01';
+}
+
+/* Editorial italic emphasis */
+.serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Subtle paper grain via SVG noise */
+.noise {
+  position: relative;
+}
+.noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Subtle dotted background */
+.bg-dots {
+  background-image: radial-gradient(
+    color-mix(in oklch, var(--border) 80%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 16px 16px;
+}
+
+/* Subtle hairline grid */
+.bg-hairline {
+  background-image:
+    linear-gradient(to right, color-mix(in oklch, var(--border) 50%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklch, var(--border) 50%, transparent) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+.animate-marquee {
+  animation: marquee 180s linear infinite;
+  will-change: transform;
+}
+.marquee-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+/* Pulse dot */
+@keyframes ping-soft {
+  0%   { box-shadow: 0 0 0 0 color-mix(in oklch, var(--accent) 60%, transparent); }
+  70%  { box-shadow: 0 0 0 8px color-mix(in oklch, var(--accent) 0%, transparent); }
+  100% { box-shadow: 0 0 0 0 color-mix(in oklch, var(--accent) 0%, transparent); }
+}
+.pulse-dot {
+  animation: ping-soft 2.4s ease-out infinite;
+}
+
+/* Underline animated link */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.link-underline:hover {
+  background-size: 100% 1px;
+}
+
+/* Hairline horizontal */
+.hr-hairline {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in oklch, var(--border) 90%, transparent) 12%,
+    color-mix(in oklch, var(--border) 90%, transparent) 88%,
+    transparent
+  );
+}
+
+/* Fancy small caps eyebrow */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+/* Print */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white !important; color: black !important; }
+  [class*='animate-in'],
+  .animate-in { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .animate-marquee { animation: none !important; }
+}
