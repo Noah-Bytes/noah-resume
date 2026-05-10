@@ -140,8 +140,16 @@ export function ContactSection() {
 					className="mt-10 flex flex-wrap items-center justify-center gap-3 animate-in fade-in-0 slide-in-from-bottom-2 duration-700 delay-300"
 					style={{ animationFillMode: "both" }}
 				>
-					<CopyText value={profile.email} label={contact.copyEmail} />
-					<CopyText value={profile.phone} label={contact.copyPhone} />
+					<CopyText
+						value={profile.email}
+						label={contact.copyEmail}
+						notifyEvent="copy_email"
+					/>
+					<CopyText
+						value={profile.phone}
+						label={contact.copyPhone}
+						notifyEvent="copy_phone"
+					/>
 					<PrintButton />
 				</div>
 			</div>

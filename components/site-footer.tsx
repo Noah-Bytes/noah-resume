@@ -1,3 +1,4 @@
+import Image from "next/image";
 import meta from "@/lib/meta";
 
 const { resume, ui } = meta;
@@ -11,9 +12,14 @@ export function SiteFooter() {
 		<footer className="border-t border-border/60 bg-card/40">
 			<div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-6 px-5 py-10 md:flex-row md:items-center md:px-8">
 				<div className="flex items-center gap-3">
-					<span className="grid size-8 place-items-center rounded-md bg-foreground text-background">
-						<span className="font-serif text-base italic leading-none">N</span>
-					</span>
+					<Image
+						src="/logo.svg"
+						alt=""
+						width={32}
+						height={32}
+						className="size-8 shrink-0 rounded-md object-cover"
+						aria-hidden
+					/>
 					<div className="flex flex-col leading-tight">
 						<span className="text-sm font-medium tracking-tight">
 							{profile.name}{" "}

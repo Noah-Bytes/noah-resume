@@ -3,6 +3,10 @@
 import { Check, Copy } from "lucide-react";
 import * as React from "react";
 import meta from "@/lib/meta";
+import {
+	notifyResumeEvent,
+	type ResumeNotifyEvent,
+} from "@/lib/resume-notify-client";
 import { cn } from "@/lib/utils";
 
 const { copyText } = meta.ui;
@@ -11,14 +15,17 @@ type Props = {
 	value: string;
 	label?: string;
 	className?: string;
+	/** 复制成功后上报企业微信机器人 */
+	notifyEvent?: Extract<ResumeNotifyEvent, "copy_email" | "copy_phone">;
 };
 
-export function CopyText({ value, label, className }: Props) {
+export function CopyText({ value, label, className, notifyEvent }: Props) {
 	const [copied, setCopied] = React.useState(false);
 
 	const handleCopy = async () => {
 		try {
 			await navigator.clipboard.writeText(value);
+			if (notifyEvent) notifyResumeEvent(notifyEvent, { copiedText: value });
 			setCopied(true);
 			window.setTimeout(() => setCopied(false), 1600);
 		} catch {

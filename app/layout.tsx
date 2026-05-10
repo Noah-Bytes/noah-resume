@@ -9,6 +9,7 @@ import {
 	Noto_Sans_SC,
 	Noto_Serif_SC,
 } from "next/font/google";
+import { ResumeNotifyClickCapture } from "@/components/resume-notify-click-capture";
 import meta from "@/lib/meta";
 
 const inter = Inter({
@@ -57,6 +58,10 @@ export const metadata: Metadata = {
 		description: meta.site.metadata.openGraph.description,
 		type: meta.site.metadata.openGraph.type,
 	},
+	icons: {
+		icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+		apple: "/logo.svg",
+	},
 };
 
 export default function RootLayout({
@@ -70,6 +75,7 @@ export default function RootLayout({
 			className={`${inter.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable} ${notoSansSC.variable} ${notoSerifSC.variable} bg-background`}
 		>
 			<body className="font-sans antialiased">
+				<ResumeNotifyClickCapture />
 				{children}
 				{process.env.NODE_ENV === "production" && <Analytics />}
 			</body>
