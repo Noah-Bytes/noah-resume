@@ -47,14 +47,7 @@ const notoSerifSC = Noto_Serif_SC({
 	display: "swap",
 });
 
-const siteUrl =
-	process.env.NEXT_PUBLIC_SITE_URL ??
-	(process.env.VERCEL_PROJECT_PRODUCTION_URL
-		? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-		: "http://localhost:3000");
-
 export const metadata: Metadata = {
-	metadataBase: new URL(siteUrl),
 	title: meta.site.metadata.title,
 	description: meta.site.metadata.description,
 	keywords: meta.site.metadata.keywords,
@@ -63,11 +56,6 @@ export const metadata: Metadata = {
 		title: meta.site.metadata.openGraph.title,
 		description: meta.site.metadata.openGraph.description,
 		type: meta.site.metadata.openGraph.type,
-	},
-	twitter: {
-		card: "summary_large_image",
-		title: meta.site.metadata.openGraph.title,
-		description: meta.site.metadata.openGraph.description,
 	},
 };
 
