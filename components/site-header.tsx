@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { Logo } from "@/components/logo";
 import meta from "@/lib/meta";
 import { cn } from "@/lib/utils";
 
@@ -52,9 +53,11 @@ export function SiteHeader() {
 		>
 			<div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5 md:px-8">
 				<a href="#top" className="group flex items-center gap-2.5">
-					<span className="grid size-7 place-items-center rounded-md bg-foreground text-background transition-transform group-hover:-rotate-6">
-						<span className="font-serif text-base italic leading-none">N</span>
-					</span>
+					<Logo
+						size={28}
+						showCrosshair={false}
+						className="text-foreground transition-transform group-hover:-rotate-6"
+					/>
 					<div className="hidden flex-col leading-tight sm:flex">
 						<span className="text-[13px] font-medium tracking-tight">
 							{profile.name}{" "}

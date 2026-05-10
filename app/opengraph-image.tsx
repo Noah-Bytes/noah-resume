@@ -79,30 +79,52 @@ export default async function OpengraphImage() {
 						gap: 14,
 					}}
 				>
-					<div
-						style={{
-							display: "flex",
-							alignItems: "center",
-							justifyContent: "center",
-							width: 44,
-							height: 44,
-							background: INK,
-							borderRadius: 10,
-						}}
+					<svg
+						width={52}
+						height={52}
+						viewBox="0 0 64 64"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
 					>
-						<span
-							style={{
-								fontFamily: "InstrumentSerif",
-								fontStyle: "italic",
-								fontSize: 30,
-								color: PAPER,
-								lineHeight: 1,
-								marginTop: -3,
-							}}
+						<title>Noah</title>
+						<g
+							stroke={INK}
+							strokeWidth="1.4"
+							strokeLinecap="round"
+							opacity="0.55"
 						>
-							N
-						</span>
-					</div>
+							<line x1="9" y1="13" x2="13" y2="13" />
+							<line x1="11" y1="11" x2="11" y2="15" />
+						</g>
+						<line
+							x1="18"
+							y1="15"
+							x2="18"
+							y2="49"
+							stroke={INK}
+							strokeWidth="6"
+							strokeLinecap="round"
+						/>
+						<line
+							x1="18"
+							y1="15"
+							x2="46"
+							y2="49"
+							stroke={ACCENT}
+							strokeWidth="6"
+							strokeLinecap="round"
+						/>
+						<line
+							x1="46"
+							y1="15"
+							x2="46"
+							y2="49"
+							stroke={INK}
+							strokeWidth="6"
+							strokeLinecap="round"
+						/>
+						<circle cx="54" cy="49" r="3.5" fill={ACCENT} />
+					</svg>
 					<div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
 						<span style={{ fontSize: 18, fontWeight: 600 }}>
 							Yang Chen{" "}
