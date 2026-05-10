@@ -11,6 +11,7 @@ import {
 } from "next/font/google";
 import { ResumeNotifyClickCapture } from "@/components/resume-notify-click-capture";
 import meta from "@/lib/meta";
+import { getSiteUrl } from "@/lib/site-url";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -49,10 +50,15 @@ const notoSerifSC = Noto_Serif_SC({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL(getSiteUrl()),
 	title: meta.site.metadata.title,
 	description: meta.site.metadata.description,
 	keywords: meta.site.metadata.keywords,
 	authors: meta.site.metadata.authors,
+	manifest: "/site.webmanifest",
+	alternates: {
+		canonical: "/",
+	},
 	openGraph: {
 		title: meta.site.metadata.openGraph.title,
 		description: meta.site.metadata.openGraph.description,
