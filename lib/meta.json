@@ -1,7 +1,7 @@
 {
 	"site": {
 		"metadata": {
-			"title": "杨晨 Noah · 高级全栈 / Electron 架构师",
+			"title": "杨晨 Noah · 高级全栈 / Harness Engineer",
 			"description": "11 年研发经验，6 年团队管理经验。专注 Electron、React、Next.js、NestJS 全栈架构与工程落地，擅长插件化架构、桌面端基础设施与 AI 工具开发。",
 			"keywords": [
 				"杨晨",
@@ -10,6 +10,7 @@
 				"Senior Full-stack Engineer",
 				"Electron Engineer",
 				"Electron Infrastructure",
+				"Harness Engineer",
 				"React",
 				"Next.js",
 				"NestJS",
@@ -22,7 +23,7 @@
 				}
 			],
 			"openGraph": {
-				"title": "杨晨 Noah · Senior Full-stack / Electron Infrastructure Engineer",
+				"title": "杨晨 Noah · Senior Full-stack / Harness Engineer",
 				"description": "11 年研发经验 · Electron 基础设施 · 全栈架构 · AI 工具工程",
 				"type": "profile"
 			}
@@ -53,9 +54,9 @@
 		},
 		"jobIntent": {
 			"eyebrow": "Role · 求职意向",
-			"headline": "高级全栈 / Electron 架构师",
-			"openToEn": "Senior Full-stack / Electron Infrastructure Engineer",
-			"directionCN": "高级全栈 / Electron 架构师"
+			"headline": "高级全栈 / Harness Engineer",
+			"openToEn": "Senior Full-stack / Harness Engineer",
+			"directionCN": "高级全栈 / Harness Engineer"
 		},
 		"stats": [
 			{
