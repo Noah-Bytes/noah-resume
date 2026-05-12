@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import meta from "@/lib/meta";
 
@@ -124,6 +125,26 @@ export function ExperienceSection() {
 												{exp.company}
 											</span>
 										</h3>
+
+										{exp.productLinks?.length ? (
+											<div className="mt-3 flex flex-wrap gap-x-3 gap-y-2">
+												{exp.productLinks.map((link) => (
+													<a
+														key={link.href}
+														href={link.href}
+														target="_blank"
+														rel="noreferrer"
+														className="group inline-flex items-center gap-1 font-mono text-[11px] text-muted-foreground transition-colors hover:text-accent"
+													>
+														<span className="link-underline">{link.label}</span>
+														<ArrowUpRight
+															className="size-3 shrink-0 opacity-70 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100"
+															aria-hidden
+														/>
+													</a>
+												))}
+											</div>
+										) : null}
 
 										<ul className="mt-5 grid gap-x-8 gap-y-2.5 text-[15px] leading-relaxed text-muted-foreground sm:grid-cols-2">
 											{exp.highlights.map((h, i) => (

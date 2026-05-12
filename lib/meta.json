@@ -182,6 +182,20 @@
 				"period": "2024.08 — 至今",
 				"current": true,
 				"meta": "Electron · 插件运行时 · 分布式算力",
+				"productLinks": [
+					{
+						"label": "crowdcomputed.com",
+						"href": "https://crowdcomputed.com/"
+					},
+					{
+						"label": "provider.crowdcomputed.com",
+						"href": "https://provider.crowdcomputed.com/"
+					},
+					{
+						"label": "cloud.crowdcomputed.com",
+						"href": "https://cloud.crowdcomputed.com/"
+					}
+				],
 				"highlights": [
 					"负责分布式算力桌面客户端与插件侧能力建设，参与 Electron、NestJS 与多端 Web 系统协同开发",
 					"负责插件运行时、Keeper 守护进程与远程终端相关模块开发，覆盖任务调度、进程托管与节点运维等能力",
