@@ -5,6 +5,7 @@ const LABELS: Record<string, string> = {
 	pdf_download: "📄 PDF 下载",
 	copy_email: "📋 复制邮箱",
 	copy_phone: "📋 复制电话",
+	copy_telegram: "📋 复制 Telegram",
 	mailto_click: "✉️ 点击发送邮件",
 };
 
@@ -93,7 +94,11 @@ export async function POST(req: Request) {
 	if (platform) lines.push(`平台：${platform}`);
 	if (userAgent) lines.push(`UA：${userAgent}`);
 
-	if (rawType === "copy_email" || rawType === "copy_phone") {
+	if (
+		rawType === "copy_email" ||
+		rawType === "copy_phone" ||
+		rawType === "copy_telegram"
+	) {
 		if (copiedText) lines.push(`复制内容：${copiedText}`);
 	}
 	if (rawType === "mailto_click" && linkHref) {

@@ -4,6 +4,7 @@ export type ResumeNotifyEvent =
 	| "pdf_download"
 	| "copy_email"
 	| "copy_phone"
+	| "copy_telegram"
 	| "mailto_click";
 
 /** 随事件附加的简要上下文（不含敏感推测，均为浏览器可提供字段） */

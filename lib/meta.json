@@ -39,6 +39,7 @@
 			"phone": "15968159540",
 			"email": "yangchen.xiyou@gmail.com",
 			"github": "https://github.com/Noah-Bytes",
+			"telegram": "https://t.me/tb_noah",
 			"currentlyBuilding": "CrowdComputed · 分布式算力桌面客户端",
 			"summary": "拥有 11 年研发经验，长期负责 Electron、React、Next.js、NestJS 全栈系统架构与工程落地。深度参与多个桌面端、商家 SaaS、AI 工具与分布式系统从 0 到 1 建设，具备插件化架构、运行时设计、工程体系与跨团队协作经验。",
 			"manifesto": [
@@ -549,16 +550,19 @@
 			"titleAccent": "架构设计与全栈工程",
 			"titleSuffix": "相关机会。",
 			"bodyPrefix": "目前开放",
-			"bodySuffix": "方向机会，支持西安、杭州、北京、深圳、上海 或 Remote Work。欢迎通过邮箱或 GitHub 联系。",
+			"bodySuffix": "方向机会，支持西安、杭州、北京、深圳、上海 或 Remote Work。欢迎通过邮箱、GitHub 或 Telegram 联系。",
 			"labels": {
 				"email": "Email · 邮箱",
 				"phone": "Phone · 电话",
 				"github": "GitHub",
+				"telegram": "Telegram · TG",
 				"location": "Location · 现居"
 			},
 			"githubDisplayPath": "github.com/Noah-Bytes",
+			"telegramDisplayPath": "t.me/tb_noah",
 			"copyEmail": "复制邮箱",
-			"copyPhone": "复制电话"
+			"copyPhone": "复制电话",
+			"copyTelegram": "复制 Telegram"
 		},
 		"footer": {
 			"rightsTemplate": "© {year} · all rights reserved",

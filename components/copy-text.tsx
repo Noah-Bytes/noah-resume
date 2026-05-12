@@ -16,7 +16,10 @@ type Props = {
 	label?: string;
 	className?: string;
 	/** 复制成功后上报企业微信机器人 */
-	notifyEvent?: Extract<ResumeNotifyEvent, "copy_email" | "copy_phone">;
+	notifyEvent?: Extract<
+		ResumeNotifyEvent,
+		"copy_email" | "copy_phone" | "copy_telegram"
+	>;
 };
 
 export function CopyText({ value, label, className, notifyEvent }: Props) {

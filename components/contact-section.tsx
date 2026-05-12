@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Github, Mail, MapPin, Phone, Send } from "lucide-react";
 import { CopyText } from "@/components/copy-text";
 import { PrintButton } from "@/components/print-button";
 import meta from "@/lib/meta";
@@ -121,7 +121,32 @@ export function ContactSection() {
 						/>
 					</a>
 
-					<div className="flex items-center justify-between gap-4 bg-card px-6 py-6">
+					<a
+						href={profile.telegram}
+						target="_blank"
+						rel="noreferrer"
+						className="group flex items-center justify-between gap-4 bg-card px-6 py-6 transition-colors hover:bg-card/70"
+					>
+						<div className="flex items-center gap-4">
+							<span className="grid size-10 place-items-center rounded-full bg-accent/12 text-accent">
+								<Send className="size-4" aria-hidden />
+							</span>
+							<div className="flex flex-col">
+								<span className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+									{contact.labels.telegram}
+								</span>
+								<span className="link-underline text-sm">
+									{contact.telegramDisplayPath}
+								</span>
+							</div>
+						</div>
+						<ArrowUpRight
+							className="size-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
+							aria-hidden
+						/>
+					</a>
+
+					<div className="flex items-center justify-between gap-4 bg-card px-6 py-6 md:col-span-2">
 						<div className="flex items-center gap-4">
 							<span className="grid size-10 place-items-center rounded-full bg-accent/12 text-accent">
 								<MapPin className="size-4" aria-hidden />
@@ -149,6 +174,11 @@ export function ContactSection() {
 						value={profile.phone}
 						label={contact.copyPhone}
 						notifyEvent="copy_phone"
+					/>
+					<CopyText
+						value={profile.telegram}
+						label={contact.copyTelegram}
+						notifyEvent="copy_telegram"
 					/>
 					<PrintButton />
 				</div>
