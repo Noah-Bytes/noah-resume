@@ -2,7 +2,7 @@
 	"site": {
 		"metadata": {
 			"title": "杨晨 Noah · 高级全栈 / Harness Engineer",
-			"description": "11 年研发经验，6 年团队管理经验。专注 Electron、React、Next.js、NestJS 全栈架构与工程落地，擅长插件化架构、桌面端基础设施与 AI 工具开发。",
+			"description": "11 年研发经验，6 年团队管理经验。专注 Electron、React、Next.js、NestJS 全栈；当前迭代端侧私人知识库（隐私向知识图谱）。擅长插件化架构、桌面端基础设施与 AI 工具工程。",
 			"keywords": [
 				"杨晨",
 				"Noah",
@@ -15,7 +15,12 @@
 				"Next.js",
 				"NestJS",
 				"TypeScript",
-				"AI Infrastructure"
+				"AI Infrastructure",
+				"端侧",
+				"知识图谱",
+				"隐私",
+				"本地优先",
+				"Personal knowledge graph"
 			],
 			"authors": [
 				{
@@ -24,7 +29,7 @@
 			],
 			"openGraph": {
 				"title": "杨晨 Noah · Senior Full-stack / Harness Engineer",
-				"description": "11 年研发经验 · Electron 基础设施 · 全栈架构 · AI 工具工程",
+				"description": "11 年研发 · Electron 与全栈基础设施 · 当前：端侧私人知识库 / 隐私知识图谱",
 				"type": "profile"
 			}
 		}
@@ -40,7 +45,7 @@
 			"email": "yangchen.xiyou@gmail.com",
 			"github": "https://github.com/Noah-Bytes",
 			"telegram": "https://t.me/tb_noah",
-			"currentlyBuilding": "CrowdComputed · 分布式算力桌面客户端",
+			"currentlyBuilding": "端侧私人知识库",
 			"summary": "拥有 11 年研发经验，长期负责 Electron、React、Next.js、NestJS 全栈系统架构与工程落地。深度参与多个桌面端、商家 SaaS、AI 工具与分布式系统从 0 到 1 建设，具备插件化架构、运行时设计、工程体系与跨团队协作经验。",
 			"manifesto": [
 				{
@@ -179,8 +184,8 @@
 			{
 				"company": "群计（北京）科技 · CrowdComputed",
 				"role": "客户端应用开发工程师",
-				"period": "2024.08 — 至今",
-				"current": true,
+				"period": "2024.08 — 2026.05",
+				"current": false,
 				"meta": "Electron · 插件运行时 · 分布式算力",
 				"productLinks": [
 					{
@@ -231,9 +236,22 @@
 		],
 		"projects": [
 			{
+				"name": "端侧私人知识库",
+				"role": "独立开发",
+				"period": "2026.05 — 至今",
+				"tagline": "Personal · Privacy · Knowledge graph",
+				"description": "仅面向个人的端侧产品：以隐私为前提搭建可用的知识图谱，数据优先留在本地，支撑关联检索与后续能力扩展；持续迭代中。",
+				"highlights": [
+					"个人场景专用，知识图谱与关系检索以隐私为边界设计",
+					"本地存储与图结构索引，压缩敏感数据外泄面"
+				],
+				"stack": ["TypeScript", "Electron", "知识图谱", "本地索引"],
+				"featured": true
+			},
+			{
 				"name": "分布式算力桌面",
 				"role": "Senior Full-stack / Electron Infrastructure Engineer",
-				"period": "2024.08 — 至今",
+				"period": "2024.08 — 2026.05",
 				"tagline": "Electron Infrastructure · Plugin Runtime · AI Workflow",
 				"description": "面向分布式算力与 AI 工作流场景的 Electron 桌面基础设施，覆盖插件运行时、远程终端、云控制台、多端 Web 与 OpenAPI 文档体系。",
 				"highlights": [
@@ -462,6 +480,11 @@
 	"ui": {
 		"navigation": [
 			{
+				"id": "now",
+				"label": "进行",
+				"num": "00"
+			},
+			{
 				"id": "about",
 				"label": "关于",
 				"num": "01"
@@ -496,6 +519,16 @@
 			"navAriaLabel": "主导航",
 			"printAriaLabel": "下载 PDF 简历",
 			"pdfLabel": "PDF"
+		},
+		"now": {
+			"eyebrow": "Now · 正在做的事",
+			"titlePrefix": "正在做",
+			"titleSuffix": "。",
+			"fallbackDescription": "仅面向个人的端侧知识库：隐私优先的知识图谱，数据以本地为主并与检索、扩展能力逐步打通。",
+			"stackEyebrow": "Stack · 栈",
+			"ctaLabel": "查看项目精选",
+			"githubHref": "https://github.com/Noah-Bytes/glean",
+			"githubDisplayPath": "github.com/Noah-Bytes/glean"
 		},
 		"hero": {
 			"portfolioEyebrow": "Portfolio · 个人简历",

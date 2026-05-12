@@ -3,6 +3,7 @@ import { ContactSection } from "@/components/contact-section";
 import { EducationSection } from "@/components/education-section";
 import { ExperienceSection } from "@/components/experience-section";
 import { HeroSection } from "@/components/hero-section";
+import { NowSection } from "@/components/now-section";
 import { ProjectsSection } from "@/components/projects-section";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { SiteFooter } from "@/components/site-footer";
@@ -16,6 +17,7 @@ export default function Home() {
 			<SiteHeader />
 			<main>
 				<HeroSection />
+				<NowSection />
 				<AboutSection />
 				<SkillsSection />
 				<ExperienceSection />
