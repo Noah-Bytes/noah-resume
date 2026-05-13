@@ -86,7 +86,10 @@ export default function RootLayout({
 				{children}
 				{process.env.NODE_ENV === "production" && [
 					<Analytics key="analytics" />,
-					<GoogleAnalytics key="google-analytics" gaId="G-PR9R1M0KQB" />,
+					<GoogleAnalytics
+						key="google-analytics"
+						gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? ""}
+					/>,
 				]}
 			</body>
 		</html>
