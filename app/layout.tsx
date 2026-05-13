@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import {
@@ -83,7 +84,10 @@ export default function RootLayout({
 			<body className="font-sans antialiased">
 				<ResumeNotifyClickCapture />
 				{children}
-				{process.env.NODE_ENV === "production" && <Analytics />}
+				{process.env.NODE_ENV === "production" && [
+					<Analytics key="analytics" />,
+					<GoogleAnalytics key="google-analytics" gaId="G-PR9R1M0KQB" />,
+				]}
 			</body>
 		</html>
 	);
