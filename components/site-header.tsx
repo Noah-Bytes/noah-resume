@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import * as React from "react";
+import { useEffect, useState } from "react";
 import meta from "@/lib/meta";
 import { cn } from "@/lib/utils";
 
@@ -10,17 +10,18 @@ const { profile } = resume;
 
 export function SiteHeader() {
 	const { navigation: navItems, header, resumePdf } = ui;
-	const [active, setActive] = React.useState<string>("about");
-	const [scrolled, setScrolled] = React.useState(false);
+	const [active, setActive] = useState<string>("now");
+	const [scrolled, setScrolled] = useState(false);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		const onScroll = () => setScrolled(window.scrollY > 16);
 		onScroll();
 		window.addEventListener("scroll", onScroll, { passive: true });
 		return () => window.removeEventListener("scroll", onScroll);
 	}, []);
 
-	React.useEffect(() => {
+	useEffect(() => {
+		console.log("useEffect");
 		const ids = navItems.map((n) => n.id);
 		const sections = ids
 			.map((id) => document.getElementById(id))
@@ -58,6 +59,7 @@ export function SiteHeader() {
 						alt={`${profile.name} · 站点标识`}
 						width={28}
 						height={28}
+						priority
 						className="size-7 shrink-0 rounded-md object-cover transition-transform group-hover:-rotate-6"
 					/>
 					<div className="hidden flex-col leading-tight sm:flex">
