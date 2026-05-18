@@ -86,7 +86,7 @@ export function ContactSection() {
 									{contact.labels.phone}
 								</span>
 								<span className="tabular link-underline text-sm">
-									{profile.phone}
+									{profile.phoneDisplay}
 								</span>
 							</div>
 						</div>
