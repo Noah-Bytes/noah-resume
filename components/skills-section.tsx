@@ -36,87 +36,49 @@ export function SkillsSection() {
 					/>
 				</div>
 
-				{/* Masonry grid with parallax */}
-				<div className="mt-8 space-y-6 md:space-y-8">
-					{skillGroups.map((group, i) => {
-						const isOdd = i % 2 === 1;
-						const speed = 0.15 + i * 0.02;
-						return (
-							<div
-								key={group.title}
-								className={`group/skill relative rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:border-border/80 hover:shadow-lg md:p-8 ${
-									isOdd ? "md:ml-[12%]" : "md:mr-[12%]"
-								}`}
-								data-parallax-y
-								data-speed={speed.toString()}
-								data-reveal
-								data-reveal-delay={`${i * 80}`}
-							>
-								{/* Parallax background accent */}
-								<div
-									aria-hidden
-									className="absolute -right-12 -top-8 -z-0 h-32 w-32 rounded-full bg-accent/5 blur-2xl transition-opacity group-hover/skill:opacity-0"
-									data-parallax-y
-									data-speed={(speed * 1.5).toString()}
-								/>
-
-								<div className="relative flex flex-col gap-6 md:gap-8">
-									{/* Header */}
-									<div className="flex items-start justify-between gap-4">
-										<div className="flex items-start gap-3">
-											<span className="tabular shrink-0 font-mono text-xs text-accent">
-												/{String(i + 1).padStart(2, "0")}
-											</span>
-											<div className="flex flex-col gap-1">
-												<h3 className="font-serif text-2xl italic tracking-tight md:text-3xl">
-													{group.title}
-												</h3>
-												<p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-													{group.titleCN}
-												</p>
-											</div>
-										</div>
-									</div>
-
-									{/* Tech tags with stagger */}
-									<ul
-										className="flex flex-wrap gap-x-2 gap-y-3"
-										data-stagger
-										data-stagger-delay="40"
-									>
-										{group.items.map((item, idx) => (
-											<li
-												key={item}
-												className="group/tag relative inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-background/40 px-3 py-1.5 text-sm transition-all hover:border-accent/50 hover:bg-background/80 hover:text-accent"
-												style={{
-													transitionDelay: `${idx * 20}ms`,
-												}}
-											>
-												<span
-													aria-hidden
-													className="size-1 rounded-full bg-muted-foreground/30 transition-colors group-hover/tag:bg-accent"
-												/>
-												{item}
-											</li>
-										))}
-									</ul>
+				<div className="overflow-hidden rounded-2xl border border-border bg-card" data-stagger>
+					{skillGroups.map((group, i) => (
+						<div
+							key={group.title}
+							className="grid grid-cols-12 gap-6 border-b border-border px-6 py-7 last:border-b-0 md:px-10 md:py-9"
+						>
+							<div className="col-span-12 flex items-start gap-3 md:col-span-4">
+								<span className="tabular mt-1 font-mono text-xs text-accent">
+									/{String(i + 1).padStart(2, "0")}
+								</span>
+								<div className="flex flex-col gap-1">
+									<h3 className="font-serif text-2xl italic tracking-tight">
+										{group.title}
+									</h3>
+									<p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+										{group.titleCN}
+									</p>
 								</div>
-
-								{/* Subtle line accent */}
-								<div
-									aria-hidden
-									className="absolute bottom-0 left-0 h-px bg-gradient-to-r from-accent/30 via-accent/10 to-transparent"
-								/>
 							</div>
-						);
-					})}
+							<div className="col-span-12 md:col-span-8">
+								<ul className="flex flex-wrap gap-x-1.5 gap-y-2">
+									{group.items.map((item) => (
+										<li
+											key={item}
+											className="group relative inline-flex items-center gap-1.5 rounded-full border border-border bg-background/60 px-3 py-1.5 text-sm transition-all hover:-translate-y-0.5 hover:border-foreground/30 hover:text-accent"
+										>
+											<span
+												aria-hidden
+												className="size-1 rounded-full bg-muted-foreground/40 transition-colors group-hover:bg-accent"
+											/>
+											{item}
+										</li>
+									))}
+								</ul>
+							</div>
+						</div>
+					))}
 				</div>
 
 				{/* Marquee */}
 				<div
-					className="mt-16 border-y border-border bg-card"
-					data-reveal
-					data-reveal-delay="400"
+					className="mt-12 border-y border-border bg-card animate-in fade-in-0 duration-700 delay-200"
+					style={{ animationFillMode: "both" }}
 				>
 					<TechMarquee items={techMarqueeItems} />
 				</div>
