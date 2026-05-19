@@ -156,6 +156,17 @@
 				]
 			},
 			{
+				"title": "Web3",
+				"titleCN": "Web3 与区块链工程",
+				"items": [
+					"Ethers",
+					"Web3",
+					"Wallet",
+					"Binance/OKX/Bybit API",
+					"Chainlink / Pyth / drand"
+				]
+			},
+			{
 				"title": "Infrastructure",
 				"titleCN": "架构与基础设施",
 				"items": [
@@ -177,7 +188,7 @@
 			{
 				"title": "Also familiar",
 				"titleCN": "其他技术储备",
-				"items": ["Vue.js", "Angular", "React Native", "Java", "Web3 / Ethers"]
+				"items": ["Vue.js", "Angular", "React Native", "Java"]
 			}
 		],
 		"experiences": [
@@ -288,6 +299,31 @@
 						"label": "核心方向",
 						"value": "基础设施"
 					}
+				],
+				"featured": true
+			},
+			{
+				"name": "预测市场后端服务",
+				"role": "后端开发",
+				"period": "2025.08 — 2026.03",
+				"tagline": "类 Polymarket · 价格与事件预测",
+				"description": "去中心化／类 Polymarket 形态的预测市场与事件预测业务：统一喂价与中台撮合、Kafka 驱动的异步链路，为高并发下的订单、持仓与结算提供可追溯价格与随机性保障。",
+				"highlights": [
+					"负责预测市场及核心喂价系统的后端架构，采用 main / task / market-hub 多应用架构，实现 HTTP 用户请求、Kafka 异步事件消费与分布式行情采集的完全解耦",
+					"对接 Binance、OKX、Bybit、Pyth、Chainlink 等 6+ 主流及预言机数据源；实现基于 WebSocket 的秒级数据采集与可配置权重聚合算法，为预测市场提供高可用、高精度的统一价格源",
+					"基于 Kafka 与 BullMQ 实现「下单、撮合、持仓更新、结算」的异步闭环；设计 market-hub 多实例 Leader 选主机制与多周期 K 线异步更新，确保高并发下分布式写入与事件推送不重复",
+					"提供高性能 WebSocket 实时订阅与 REST 历史聚合查询；深度集成 drand 随机信标，确保预测市场在价格交割与结算时的安全可信与可审计性"
+				],
+				"stack": [
+					"NestJS",
+					"TypeScript",
+					"Kafka",
+					"BullMQ",
+					"PostgreSQL",
+					"Prisma",
+					"Redis",
+					"WebSocket",
+					"drand"
 				],
 				"featured": true
 			},
@@ -511,8 +547,8 @@
 			}
 		],
 		"resumePdf": {
-			"path": "/Noah_杨晨-高级全栈_Electron 架构.pdf",
-			"downloadFilename": "Noah_杨晨-高级全栈_Electron 架构.pdf"
+			"path": "/Noah_杨晨-全栈 _ 前端 _ 后端.pdf",
+			"downloadFilename": "Noah_杨晨-全栈 _ 前端 _ 后端.pdf"
 		},
 		"header": {
 			"roleSubtitle": "full-stack engineer",
