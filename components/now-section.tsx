@@ -17,10 +17,28 @@ export function NowSection() {
 	return (
 		<section
 			id="now"
-			className="relative scroll-mt-20 border-b border-border/60 bg-muted/20 py-16 md:py-20"
+			data-parallax-scope
+			className="relative scroll-mt-20 overflow-hidden border-b border-border/60 bg-muted/20 py-16 md:py-20"
 		>
-			<div className="mx-auto max-w-6xl px-5 md:px-8">
-				<div className="animate-in fade-in-0 slide-in-from-bottom-2 duration-700">
+			<div
+				aria-hidden
+				className="pointer-events-none absolute inset-y-0 right-[-10%] -z-0 hidden w-[60%] md:block"
+			>
+				<div
+					data-parallax-y
+					data-speed="0.25"
+					className="absolute right-0 top-1/2 -translate-y-1/2 font-mono text-[clamp(5rem,12vw,9rem)] font-medium tracking-tighter"
+					style={{
+						WebkitTextStroke:
+							"1px color-mix(in oklch, var(--accent) 22%, transparent)",
+						color: "transparent",
+					}}
+				>
+					NOW.
+				</div>
+			</div>
+			<div className="relative mx-auto max-w-6xl px-5 md:px-8">
+				<div data-reveal>
 					<SectionHeading
 						index="00"
 						eyebrow={now.eyebrow}
@@ -37,8 +55,9 @@ export function NowSection() {
 				</div>
 
 				<div
-					className="rounded-2xl border border-border bg-card/80 p-7 shadow-sm backdrop-blur-sm md:p-9 animate-in fade-in-0 slide-in-from-bottom-2 duration-700"
-					style={{ animationDelay: "80ms", animationFillMode: "both" }}
+					className="rounded-2xl border border-border bg-card/80 p-7 shadow-sm backdrop-blur-sm md:p-9"
+					data-reveal
+					data-reveal-delay="80"
 				>
 					<p className="max-w-2xl text-pretty text-[15px] leading-relaxed text-muted-foreground md:text-base">
 						{current?.description ?? now.fallbackDescription}

@@ -1,4 +1,5 @@
 import { SectionHeading } from "@/components/section-heading";
+import { SectionIndex } from "@/components/section-index";
 import { TechMarquee } from "@/components/tech-marquee";
 import meta from "@/lib/meta";
 
@@ -10,10 +11,14 @@ export function SkillsSection() {
 	return (
 		<section
 			id="skills"
-			className="relative scroll-mt-20 border-b border-border/60 py-24 md:py-32"
+			data-parallax-scope
+			className="relative scroll-mt-20 overflow-hidden border-b border-border/60 py-24 md:py-32"
 		>
-			<div className="mx-auto max-w-6xl px-5 md:px-8">
-				<div className="animate-in fade-in-0 slide-in-from-bottom-2 duration-700">
+			<SectionIndex align="left" italic>
+				stack
+			</SectionIndex>
+			<div className="relative mx-auto max-w-6xl px-5 md:px-8">
+				<div data-reveal>
 					<SectionHeading
 						index="02"
 						eyebrow={skills.eyebrow}
@@ -31,15 +36,11 @@ export function SkillsSection() {
 					/>
 				</div>
 
-				<div className="overflow-hidden rounded-2xl border border-border bg-card">
+				<div className="overflow-hidden rounded-2xl border border-border bg-card" data-stagger>
 					{skillGroups.map((group, i) => (
 						<div
 							key={group.title}
-							className="grid grid-cols-12 gap-6 border-b border-border px-6 py-7 last:border-b-0 md:px-10 md:py-9 animate-in fade-in-0 slide-in-from-bottom-2 duration-700"
-							style={{
-								animationDelay: `${i * 60}ms`,
-								animationFillMode: "both",
-							}}
+							className="grid grid-cols-12 gap-6 border-b border-border px-6 py-7 last:border-b-0 md:px-10 md:py-9"
 						>
 							<div className="col-span-12 flex items-start gap-3 md:col-span-4">
 								<span className="tabular mt-1 font-mono text-xs text-accent">

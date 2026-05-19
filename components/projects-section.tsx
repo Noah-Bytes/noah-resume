@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
+import { SectionIndex } from "@/components/section-index";
 import meta from "@/lib/meta";
 import { cn } from "@/lib/utils";
 
@@ -14,10 +15,14 @@ export function ProjectsSection() {
 	return (
 		<section
 			id="projects"
-			className="relative scroll-mt-20 border-b border-border/60 py-24 md:py-32"
+			data-parallax-scope
+			className="relative scroll-mt-20 overflow-hidden border-b border-border/60 py-24 md:py-32"
 		>
-			<div className="mx-auto max-w-6xl px-5 md:px-8">
-				<div className="animate-in fade-in-0 slide-in-from-bottom-2 duration-700">
+			<SectionIndex align="left" italic>
+				selected works.
+			</SectionIndex>
+			<div className="relative mx-auto max-w-6xl px-5 md:px-8">
+				<div data-reveal>
 					<SectionHeading
 						index="04"
 						eyebrow={projUi.eyebrow}
@@ -36,16 +41,9 @@ export function ProjectsSection() {
 				</div>
 
 				{/* Featured: 2 large cards */}
-				<div className="grid gap-6 lg:grid-cols-2">
-					{featured.map((p, i) => (
-						<div
-							key={p.name}
-							className="animate-in fade-in-0 slide-in-from-bottom-2 duration-700"
-							style={{
-								animationDelay: `${i * 80}ms`,
-								animationFillMode: "both",
-							}}
-						>
+				<div className="grid gap-6 lg:grid-cols-2" data-stagger>
+					{featured.map((p) => (
+						<div key={p.name}>
 							<FeaturedCard project={p} copy={projUi} />
 						</div>
 					))}
@@ -68,15 +66,10 @@ export function ProjectsSection() {
 							{projUi.tableHeaders.stack}
 						</span>
 					</div>
-					<ul>
+					<ul data-stagger>
 						{rest.map((p, i) => (
 							<li
 								key={p.name}
-								className="animate-in fade-in-0 slide-in-from-bottom-2 duration-500"
-								style={{
-									animationDelay: `${i * 40}ms`,
-									animationFillMode: "both",
-								}}
 							>
 								<details className="group border-b border-border last:border-b-0">
 									<summary className="grid cursor-pointer list-none grid-cols-12 items-center gap-4 px-6 py-5 transition-colors hover:bg-background/60 md:px-8 [&::-webkit-details-marker]:hidden">

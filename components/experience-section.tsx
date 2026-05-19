@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
+import { SectionIndex } from "@/components/section-index";
 import meta from "@/lib/meta";
 
 const { resume, ui } = meta;
@@ -10,10 +11,12 @@ export function ExperienceSection() {
 	return (
 		<section
 			id="experience"
-			className="relative scroll-mt-20 border-b border-border/60 py-24 md:py-32"
+			data-parallax-scope
+			className="relative scroll-mt-20 overflow-hidden border-b border-border/60 py-24 md:py-32"
 		>
-			<div className="mx-auto max-w-6xl px-5 md:px-8">
-				<div className="animate-in fade-in-0 slide-in-from-bottom-2 duration-700">
+			<SectionIndex>03</SectionIndex>
+			<div className="relative mx-auto max-w-6xl px-5 md:px-8">
+				<div data-reveal>
 					<SectionHeading
 						index="03"
 						eyebrow={expUi.eyebrow}
@@ -74,15 +77,10 @@ export function ExperienceSection() {
 							aria-hidden
 							className="absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-transparent via-border to-transparent"
 						/>
-						<ol className="flex flex-col gap-12">
+						<ol className="flex flex-col gap-12" data-stagger>
 							{experiences.map((exp, idx) => (
 								<li
 									key={`${exp.company}-${idx.toString()}`}
-									className="animate-in fade-in-0 slide-in-from-bottom-2 duration-700"
-									style={{
-										animationDelay: `${idx * 80}ms`,
-										animationFillMode: "both",
-									}}
 								>
 									<div className="relative pl-8 md:pl-10">
 										<div className="absolute left-0 top-1.5 grid size-4 place-items-center">
