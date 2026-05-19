@@ -12,7 +12,7 @@ export function EducationSection() {
 			className="border-b border-border/60 py-20 md:py-24"
 		>
 			<div className="mx-auto max-w-6xl px-5 md:px-8">
-				<div className="grid grid-cols-12 items-center gap-6 rounded-2xl border border-border bg-card p-7 md:gap-10 md:p-10 animate-in fade-in-0 slide-in-from-bottom-2 duration-700">
+				<div className="grid grid-cols-12 items-center gap-6 rounded-2xl border border-border bg-card p-7 md:gap-10 md:p-10" data-reveal>
 					<div className="col-span-12 flex items-center gap-3 md:col-span-3">
 						<span className="font-mono text-xs tracking-[0.2em] text-accent">
 							{eduUi.index}

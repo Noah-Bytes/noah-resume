@@ -1,5 +1,6 @@
 import { ArrowDownRight, MapPin } from "lucide-react";
 import { CopyText } from "@/components/copy-text";
+import { HeroBackdrop } from "@/components/hero-backdrop";
 import meta from "@/lib/meta";
 
 const { resume, ui } = meta;
@@ -11,16 +12,14 @@ export function HeroSection() {
 	return (
 		<section
 			id="top"
+			data-parallax-scope
 			className="relative overflow-hidden border-b border-border/60 pb-20 pt-32 md:pb-28 md:pt-40"
 		>
 			<div
 				aria-hidden
 				className="bg-hairline absolute inset-0 opacity-[0.45] [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]"
 			/>
-			<div
-				aria-hidden
-				className="absolute -top-20 right-[-20%] -z-0 h-[420px] w-[420px] rounded-full bg-accent/10 blur-3xl md:right-[-10%]"
-			/>
+			<HeroBackdrop />
 			<div className="noise relative mx-auto max-w-6xl px-5 md:px-8">
 				<div className="flex flex-wrap items-center gap-3 text-xs animate-in fade-in-0 slide-in-from-bottom-2 duration-700">
 					<span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 backdrop-blur">
@@ -137,6 +136,7 @@ export function HeroSection() {
 				<div
 					className="mt-20 grid grid-cols-2 divide-y divide-border border-y border-border md:grid-cols-4 md:divide-x md:divide-y-0 animate-in fade-in-0 slide-in-from-bottom-2 duration-700"
 					style={{ animationDelay: "400ms", animationFillMode: "both" }}
+					data-stagger
 				>
 					{stats.map((s, i) => (
 						<div
@@ -147,8 +147,12 @@ export function HeroSection() {
 								/ {String(i + 1).padStart(2, "0")} · {s.label}
 							</span>
 							<div className="mt-2 flex items-baseline gap-1">
-								<span className="tabular text-4xl font-medium tracking-tight md:text-5xl">
-									{s.value}
+								<span
+									data-counter
+									data-counter-to={s.value}
+									className="tabular text-4xl font-medium tracking-tight md:text-5xl"
+								>
+									0
 								</span>
 								<span className="text-base font-medium text-muted-foreground md:text-lg">
 									{s.suffix}

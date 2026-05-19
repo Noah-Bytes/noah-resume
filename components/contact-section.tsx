@@ -12,6 +12,7 @@ export function ContactSection() {
 	return (
 		<section
 			id="contact"
+			data-parallax-scope
 			className="relative scroll-mt-20 overflow-hidden py-24 md:py-32"
 		>
 			<div
@@ -20,11 +21,25 @@ export function ContactSection() {
 			/>
 			<div
 				aria-hidden
+				data-parallax-y
+				data-speed="0.3"
 				className="absolute inset-x-0 top-1/2 -z-0 mx-auto h-72 max-w-3xl -translate-y-1/2 rounded-full bg-accent/8 blur-3xl"
 			/>
+			<div
+				aria-hidden
+				className="pointer-events-none absolute inset-x-0 bottom-[-2rem] flex justify-center"
+			>
+				<span
+					data-parallax-y
+					data-speed="0.35"
+					className="font-serif text-[clamp(6rem,18vw,16rem)] italic leading-none tracking-tight text-accent/[0.08]"
+				>
+					let&apos;s talk.
+				</span>
+			</div>
 
 			<div className="relative mx-auto max-w-5xl px-5 md:px-8">
-				<div className="flex flex-col items-start gap-6 md:items-center md:text-center animate-in fade-in-0 slide-in-from-bottom-2 duration-700">
+				<div className="flex flex-col items-start gap-6 md:items-center md:text-center" data-reveal>
 					<div className="flex items-center gap-3 text-muted-foreground">
 						<span className="font-mono text-xs tracking-[0.2em] text-accent">
 							{contact.index}
@@ -49,8 +64,9 @@ export function ContactSection() {
 				</div>
 
 				<div
-					className="mx-auto mt-12 grid w-full grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 animate-in fade-in-0 slide-in-from-bottom-2 duration-700 delay-150"
-					style={{ animationFillMode: "both" }}
+					className="mx-auto mt-12 grid w-full grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2"
+					data-stagger
+					data-stagger-delay="120"
 				>
 					<a
 						href={`mailto:${profile.email}`}
@@ -162,8 +178,9 @@ export function ContactSection() {
 				</div>
 
 				<div
-					className="mt-10 flex flex-wrap items-center justify-center gap-3 animate-in fade-in-0 slide-in-from-bottom-2 duration-700 delay-300"
-					style={{ animationFillMode: "both" }}
+					className="mt-10 flex flex-wrap items-center justify-center gap-3"
+					data-reveal
+					data-reveal-delay="200"
 				>
 					<CopyText
 						value={profile.email}
