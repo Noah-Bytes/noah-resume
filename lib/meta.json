@@ -2,7 +2,7 @@
 	"site": {
 		"metadata": {
 			"title": "杨晨 Noah · 高级全栈 / Harness Engineer",
-			"description": "11 年研发经验，6 年团队管理经验。专注 Electron、React、Next.js、NestJS 全栈；当前迭代端侧私人知识库（隐私向知识图谱）。擅长插件化架构、桌面端基础设施与 AI 工具工程。",
+			"description": "11 年研发经验，6 年团队管理经验。专注 Electron、React、Next.js 全栈；现任 OpenMax 全栈偏客户端。擅长插件化架构、多端工程与 AI 协作产品落地。",
 			"keywords": [
 				"杨晨",
 				"Noah",
@@ -29,7 +29,7 @@
 			],
 			"openGraph": {
 				"title": "杨晨 Noah · Senior Full-stack / Harness Engineer",
-				"description": "11 年研发 · Electron 与全栈基础设施 · 当前：端侧私人知识库 / 隐私知识图谱",
+				"description": "11 年研发 · Electron 与全栈基础设施 · 现任 OpenMax 客户端工程",
 				"type": "profile"
 			}
 		}
@@ -45,8 +45,8 @@
 			"email": "yangchen.xiyou@gmail.com",
 			"github": "https://github.com/Noah-Bytes",
 			"telegram": "https://t.me/tb_noah",
-			"currentlyBuilding": "端侧私人知识库",
-			"summary": "拥有 11 年研发经验，长期负责 Electron、React、Next.js、NestJS 全栈系统架构与工程落地。深度参与多个桌面端、商家 SaaS、AI 工具与分布式系统从 0 到 1 建设，具备插件化架构、运行时设计、工程体系与跨团队协作经验。",
+			"currentlyBuilding": "OpenMax Workspace",
+			"summary": "拥有 11 年研发经验，长期负责 Electron、React、Next.js、NestJS 全栈系统架构与工程落地。现任 OpenMax 全栈偏客户端，负责 AI Workspace 多端客户端与工程体系建设；此前深度参与分布式算力桌面、商家 SaaS 与 AI 工具从 0 到 1 建设。",
 			"manifesto": [
 				{
 					"title": "从 0 到 1 的工程架构",
@@ -193,6 +193,24 @@
 		],
 		"experiences": [
 			{
+				"company": "OpenMax",
+				"role": "全栈工程师（偏客户端）",
+				"period": "2026.06 — 至今",
+				"current": true,
+				"meta": "AI Workspace · 多端客户端",
+				"productLinks": [
+					{
+						"label": "OpenMax",
+						"href": "https://openmax.com/"
+					}
+				],
+				"highlights": [
+					"负责 OpenMax Workspace 客户端研发，覆盖 Web、桌面与移动端",
+					"参与多端 monorepo 架构、共享组件库与前端工程规范建设",
+					"推动前后端接口契约统一，配合 CI/CD 与质量保障流程落地"
+				]
+			},
+			{
 				"company": "群计（北京）科技 · CrowdComputed",
 				"role": "客户端应用开发工程师",
 				"period": "2024.08 — 2026.05",
@@ -247,9 +265,30 @@
 		],
 		"projects": [
 			{
+				"name": "OpenMax Workspace",
+				"role": "全栈工程师（偏客户端）",
+				"period": "2026.06 — 至今",
+				"tagline": "AI Workspace · Human × Agent",
+				"description": "面向团队的人机协作 Workspace 产品，覆盖 Web、桌面与移动端的统一客户端工程。",
+				"highlights": [
+					"参与多端客户端架构与共享 UI 组件体系建设",
+					"推动前后端接口契约与类型体系统一",
+					"配合工程规范、自动化测试与发布流程落地"
+				],
+				"stack": [
+					"Next.js",
+					"Electron",
+					"Expo",
+					"TypeScript",
+					"React",
+					"TurboRepo"
+				],
+				"featured": true
+			},
+			{
 				"name": "端侧私人知识库",
 				"role": "独立开发",
-				"period": "2026.05 — 至今",
+				"period": "2026.05 — 2026.06",
 				"tagline": "Personal · Privacy · Knowledge graph",
 				"description": "仅面向个人的端侧产品：以隐私为前提搭建可用的知识图谱，数据优先留在本地，支撑关联检索与后续能力扩展；持续迭代中。",
 				"highlights": [
@@ -257,7 +296,7 @@
 					"本地存储与图结构索引，压缩敏感数据外泄面"
 				],
 				"stack": ["TypeScript", "Electron", "知识图谱", "本地索引"],
-				"featured": true
+				"featured": false
 			},
 			{
 				"name": "分布式算力桌面",
@@ -602,7 +641,7 @@
 			"description": "从业务研发到团队管理，再到 Electron 与基础设施方向，长期保持复杂系统架构与工程实践。",
 			"sidebarEyebrow": "Career · 履历主线",
 			"sidebarRange": "2014 — Now",
-			"sidebarCaption": "全栈架构 · Electron · 工程体系",
+			"sidebarCaption": "AI Workspace · Electron · 工程体系",
 			"currentBadge": "current"
 		},
 		"projects": {
