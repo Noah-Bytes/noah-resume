@@ -602,8 +602,8 @@
 			"fallbackDescription": "仅面向个人的端侧知识库：隐私优先的知识图谱，数据以本地为主并与检索、扩展能力逐步打通。",
 			"stackEyebrow": "Stack · 栈",
 			"ctaLabel": "查看项目精选",
-			"githubHref": "https://github.com/gleean/glean",
-			"githubDisplayPath": "github.com/gleean/glean"
+			"githubHref": "https://github.com/openmaxai",
+			"githubDisplayPath": "github.com/openmaxai"
 		},
 		"hero": {
 			"portfolioEyebrow": "Portfolio · 个人简历",
