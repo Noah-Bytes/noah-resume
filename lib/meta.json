@@ -2,7 +2,7 @@
 	"site": {
 		"metadata": {
 			"title": "杨晨 Noah · 高级全栈 / Harness Engineer",
-			"description": "11 年研发经验，6 年团队管理经验。专注 Electron、React、Next.js 全栈；现任 OpenMax 全栈偏客户端。擅长插件化架构、多端工程与 AI 协作产品落地。",
+			"description": "11 年研发经验，6 年团队管理经验。专注 Electron、React、Next.js 全栈。擅长插件化架构、多端工程与 AI 协作产品落地。",
 			"keywords": [
 				"杨晨",
 				"Noah",
@@ -29,7 +29,7 @@
 			],
 			"openGraph": {
 				"title": "杨晨 Noah · Senior Full-stack / Harness Engineer",
-				"description": "11 年研发 · Electron 与全栈基础设施 · 现任 OpenMax 客户端工程",
+				"description": "11 年研发 · Electron 与全栈基础设施 · 开源与 AI 协作产品",
 				"type": "profile"
 			}
 		}
@@ -45,8 +45,8 @@
 			"email": "yangchen.xiyou@gmail.com",
 			"github": "https://github.com/Noah-Bytes",
 			"telegram": "https://t.me/tb_noah",
-			"currentlyBuilding": "OpenMax Workspace",
-			"summary": "拥有 11 年研发经验，长期负责 Electron、React、Next.js、NestJS 全栈系统架构与工程落地。现任 OpenMax 全栈偏客户端，负责 AI Workspace 多端客户端与工程体系建设；此前深度参与分布式算力桌面、商家 SaaS 与 AI 工具从 0 到 1 建设。",
+			"currentlyBuilding": "OpenMax 社区",
+			"summary": "拥有 11 年研发经验，长期负责 Electron、React、Next.js、NestJS 全栈系统架构与工程落地。业余参与 OpenMax 开源社区；此前深度参与分布式算力桌面、商家 SaaS 与 AI 工具从 0 到 1 建设。",
 			"manifesto": [
 				{
 					"title": "从 0 到 1 的工程架构",
@@ -193,24 +193,6 @@
 		],
 		"experiences": [
 			{
-				"company": "OpenMax",
-				"role": "全栈工程师（偏客户端）",
-				"period": "2026.06 — 至今",
-				"current": true,
-				"meta": "AI Workspace · 多端客户端",
-				"productLinks": [
-					{
-						"label": "OpenMax",
-						"href": "https://openmax.com/"
-					}
-				],
-				"highlights": [
-					"负责 OpenMax Workspace 客户端研发，覆盖 Web、桌面与移动端",
-					"参与多端 monorepo 架构、共享组件库与前端工程规范建设",
-					"推动前后端接口契约统一，配合 CI/CD 与质量保障流程落地"
-				]
-			},
-			{
 				"company": "群计（北京）科技 · CrowdComputed",
 				"role": "客户端应用开发工程师",
 				"period": "2024.08 — 2026.05",
@@ -265,11 +247,11 @@
 		],
 		"projects": [
 			{
-				"name": "OpenMax Workspace",
-				"role": "全栈工程师（偏客户端）",
-				"period": "2026.06 — 至今",
-				"tagline": "AI Workspace · Human × Agent",
-				"description": "面向团队的人机协作 Workspace 产品，覆盖 Web、桌面与移动端的统一客户端工程。",
+				"name": "OpenMax 社区",
+				"role": "",
+				"period": "",
+				"tagline": "开源社区 · Human × Agent",
+				"description": "人机协作相关的开源社区项目，覆盖 Web、桌面与移动端的客户端工程实践。",
 				"highlights": [
 					"参与多端客户端架构与共享 UI 组件体系建设",
 					"推动前后端接口契约与类型体系统一",

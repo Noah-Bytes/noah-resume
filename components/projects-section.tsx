@@ -176,9 +176,11 @@ function FeaturedCard({
 					<span className="font-mono text-xs uppercase tracking-[0.18em] text-accent">
 						{copy.featuredBadge}
 					</span>
-					<span className="tabular font-mono text-xs text-muted-foreground">
-						{p.period}
-					</span>
+					{p.period ? (
+						<span className="tabular font-mono text-xs text-muted-foreground">
+							{p.period}
+						</span>
+					) : null}
 				</div>
 
 				<div className="mt-6 flex items-start gap-3">

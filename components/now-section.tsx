@@ -6,9 +6,11 @@ const { resume, ui } = meta;
 const { profile, projects } = resume;
 const { now } = ui;
 
-/** 优先展示 period 含「至今」的进行中项目（与项目精选同步） */
+/** 优先匹配 currentlyBuilding 名称，其次取 featured 项目 */
 function getCurrentProject() {
-	return projects.find((p) => p.period.includes("至今"));
+	const byName = projects.find((p) => p.name === profile.currentlyBuilding);
+	if (byName) return byName;
+	return projects.find((p) => p.featured);
 }
 
 export function NowSection() {
