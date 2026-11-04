@@ -64,6 +64,15 @@ export const metadata: Metadata = {
 		title: meta.site.metadata.openGraph.title,
 		description: meta.site.metadata.openGraph.description,
 		type: meta.site.metadata.openGraph.type,
+		url: "/",
+		siteName: "noahyc.me",
+		locale: "zh_CN",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: meta.site.metadata.openGraph.title,
+		description: meta.site.metadata.openGraph.description,
+		creator: "@codebynoah",
 	},
 	icons: {
 		icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],

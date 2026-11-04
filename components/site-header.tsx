@@ -1,7 +1,16 @@
 "use client";
 
+import { Menu } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+	Sheet,
+	SheetContent,
+	SheetHeader,
+	SheetTitle,
+	SheetTrigger,
+} from "@/components/ui/sheet";
 import meta from "@/lib/meta";
 import { cn } from "@/lib/utils";
 
@@ -12,6 +21,7 @@ export function SiteHeader() {
 	const { navigation: navItems, header, resumePdf } = ui;
 	const [active, setActive] = useState<string>("now");
 	const [scrolled, setScrolled] = useState(false);
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
 		const onScroll = () => setScrolled(window.scrollY > 16);
@@ -21,7 +31,6 @@ export function SiteHeader() {
 	}, []);
 
 	useEffect(() => {
-		console.log("useEffect");
 		const ids = navItems.map((n) => n.id);
 		const sections = ids
 			.map((id) => document.getElementById(id))
@@ -41,7 +50,15 @@ export function SiteHeader() {
 			io.observe(s);
 		}
 		return () => io.disconnect();
-	}, []);
+	}, [navItems]);
+
+	const navLinkClass = (isActive: boolean) =>
+		cn(
+			"group relative flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm transition-colors",
+			isActive
+				? "text-foreground"
+				: "text-muted-foreground hover:text-foreground",
+		);
 
 	return (
 		<header
@@ -52,8 +69,8 @@ export function SiteHeader() {
 					: "border-b border-transparent",
 			)}
 		>
-			<div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5 md:px-8">
-				<a href="#top" className="group flex items-center gap-2.5">
+			<div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-2 px-5 md:px-8">
+				<a href="#top" className="group flex min-w-0 items-center gap-2.5">
 					<Image
 						src="/logo.svg"
 						alt={`${profile.name} · 站点标识`}
@@ -85,12 +102,7 @@ export function SiteHeader() {
 							<a
 								key={item.id}
 								href={`#${item.id}`}
-								className={cn(
-									"group relative flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm transition-colors",
-									isActive
-										? "text-foreground"
-										: "text-muted-foreground hover:text-foreground",
-								)}
+								className={navLinkClass(isActive)}
 							>
 								<span
 									className={cn(
@@ -112,7 +124,54 @@ export function SiteHeader() {
 					})}
 				</nav>
 
-				<div className="flex items-center gap-2">
+				<div className="flex shrink-0 items-center gap-2">
+					<Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+						<SheetTrigger asChild>
+							<Button
+								type="button"
+								variant="outline"
+								size="icon-sm"
+								className="md:hidden"
+								aria-label="打开站点导航"
+							>
+								<Menu className="size-4" aria-hidden />
+							</Button>
+						</SheetTrigger>
+						<SheetContent side="right" className="w-[min(100vw-2rem,20rem)]">
+							<SheetHeader>
+								<SheetTitle className="text-left font-medium tracking-tight">
+									{profile.name} / {profile.englishName}
+								</SheetTitle>
+							</SheetHeader>
+							<nav
+								className="mt-6 flex flex-col gap-1"
+								aria-label={header.navAriaLabel}
+							>
+								{navItems.map((item) => {
+									const isActive = active === item.id;
+									return (
+										<a
+											key={item.id}
+											href={`#${item.id}`}
+											onClick={() => setMenuOpen(false)}
+											className={cn(
+												"flex items-center gap-3 rounded-lg px-3 py-3 text-base transition-colors",
+												isActive
+													? "bg-accent/10 text-foreground"
+													: "text-muted-foreground hover:bg-muted/60 hover:text-foreground",
+											)}
+										>
+											<span className="tabular font-mono text-xs text-accent">
+												{item.num}
+											</span>
+											<span>{item.label}</span>
+										</a>
+									);
+								})}
+							</nav>
+						</SheetContent>
+					</Sheet>
+
 					<a
 						href={`mailto:${profile.email}`}
 						className="hidden rounded-full border border-border bg-card px-3 py-1.5 font-mono text-xs text-muted-foreground transition-colors hover:border-foreground/40 hover:text-foreground sm:inline-flex"

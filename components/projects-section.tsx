@@ -7,6 +7,15 @@ import { cn } from "@/lib/utils";
 const { resume, ui } = meta;
 const { projects } = resume;
 
+type Project = (typeof projects)[number];
+
+function projectHref(project: Project): string | undefined {
+	if ("url" in project && typeof project.url === "string" && project.url) {
+		return project.url;
+	}
+	return undefined;
+}
+
 export function ProjectsSection() {
 	const { projects: projUi } = ui;
 	const featured = projects.filter((p) => p.featured);
@@ -40,7 +49,6 @@ export function ProjectsSection() {
 					/>
 				</div>
 
-				{/* Featured: 2 large cards */}
 				<div className="grid gap-6 lg:grid-cols-2" data-stagger>
 					{featured.map((p) => (
 						<div key={p.name}>
@@ -49,10 +57,11 @@ export function ProjectsSection() {
 					))}
 				</div>
 
-				{/* Rest: dense table-like list */}
 				<div className="mt-10 overflow-hidden rounded-2xl border border-border bg-card">
-					<div className="grid grid-cols-12 gap-4 border-b border-border bg-background/60 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground md:px-8">
-						<span className="col-span-1">{projUi.tableHeaders.no}</span>
+					<div className="grid grid-cols-12 gap-2 border-b border-border bg-background/60 px-4 py-3 font-mono text-[9px] uppercase tracking-[0.12em] text-muted-foreground sm:gap-4 sm:px-6 sm:text-[11px] sm:tracking-[0.18em] md:px-8">
+						<span className="col-span-2 sm:col-span-1">
+							{projUi.tableHeaders.no}
+						</span>
 						<span className="col-span-5 sm:col-span-4">
 							{projUi.tableHeaders.project}
 						</span>
@@ -62,26 +71,24 @@ export function ProjectsSection() {
 						<span className="hidden md:col-span-2 md:block">
 							{projUi.tableHeaders.period}
 						</span>
-						<span className="col-span-6 text-right sm:col-span-2">
+						<span className="col-span-5 text-right sm:col-span-2">
 							{projUi.tableHeaders.stack}
 						</span>
 					</div>
 					<ul data-stagger>
 						{rest.map((p, i) => (
-							<li
-								key={p.name}
-							>
+							<li key={p.name}>
 								<details className="group border-b border-border last:border-b-0">
-									<summary className="grid cursor-pointer list-none grid-cols-12 items-center gap-4 px-6 py-5 transition-colors hover:bg-background/60 md:px-8 [&::-webkit-details-marker]:hidden">
-										<span className="tabular col-span-1 font-mono text-xs text-muted-foreground">
+									<summary className="grid cursor-pointer list-none grid-cols-12 items-center gap-2 px-4 py-5 transition-colors hover:bg-background/60 sm:gap-4 sm:px-6 md:px-8 [&::-webkit-details-marker]:hidden">
+										<span className="tabular col-span-2 font-mono text-[11px] text-muted-foreground sm:col-span-1 sm:text-xs">
 											{String(i + 3).padStart(2, "0")}
 										</span>
-										<span className="col-span-5 flex items-center gap-2 sm:col-span-4">
-											<span className="text-base font-medium tracking-tight md:text-lg">
+										<span className="col-span-5 flex min-w-0 items-center gap-2 sm:col-span-4">
+											<span className="truncate text-base font-medium tracking-tight md:text-lg">
 												{p.name}
 											</span>
 											<ArrowUpRight
-												className="size-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent group-open:rotate-45"
+												className="size-4 shrink-0 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent group-open:rotate-45"
 												aria-hidden
 											/>
 										</span>
@@ -91,7 +98,7 @@ export function ProjectsSection() {
 										<span className="tabular hidden font-mono text-xs text-muted-foreground md:col-span-2 md:block">
 											{p.period}
 										</span>
-										<span className="col-span-6 truncate text-right font-mono text-[11px] text-muted-foreground sm:col-span-2">
+										<span className="col-span-5 truncate text-right font-mono text-[10px] text-muted-foreground sm:col-span-2 sm:text-[11px]">
 											{p.stack.slice(0, 2).join(" · ")}
 										</span>
 									</summary>
@@ -161,16 +168,20 @@ function FeaturedCard({
 	project: p,
 	copy,
 }: {
-	project: (typeof projects)[number];
+	project: Project;
 	copy: typeof ui.projects;
 }) {
-	return (
-		<article
-			className={cn(
-				"group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all",
-				"hover:-translate-y-0.5 hover:border-foreground/30 hover:shadow-[0_24px_60px_-30px_rgba(0,0,0,0.18)]",
-			)}
-		>
+	const href = projectHref(p);
+	const isLink = Boolean(href);
+
+	const cardClass = cn(
+		"group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all",
+		isLink &&
+			"hover:-translate-y-0.5 hover:border-foreground/30 hover:shadow-[0_24px_60px_-30px_rgba(0,0,0,0.18)]",
+	);
+
+	const body = (
+		<>
 			<div className="relative flex-1 p-7 md:p-9">
 				<div className="flex items-start justify-between gap-4">
 					<span className="font-mono text-xs uppercase tracking-[0.18em] text-accent">
@@ -187,11 +198,16 @@ function FeaturedCard({
 					<h3 className="text-3xl font-medium tracking-tight md:text-4xl">
 						{p.name}
 					</h3>
-					<ArrowUpRight
-						className="mt-2 size-5 text-muted-foreground transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
-						aria-hidden
-					/>
+					{isLink ? (
+						<ArrowUpRight
+							className="mt-2 size-5 text-muted-foreground transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
+							aria-hidden
+						/>
+					) : null}
 				</div>
+				{p.role ? (
+					<p className="mt-2 font-mono text-xs text-muted-foreground">{p.role}</p>
+				) : null}
 				<p className="mt-1 font-serif text-lg italic text-muted-foreground">
 					{p.tagline}
 				</p>
@@ -243,6 +259,21 @@ function FeaturedCard({
 					))}
 				</div>
 			</div>
-		</article>
+		</>
 	);
+
+	if (isLink && href) {
+		return (
+			<a
+				href={href}
+				target="_blank"
+				rel="noreferrer"
+				className={cardClass}
+			>
+				{body}
+			</a>
+		);
+	}
+
+	return <article className={cardClass}>{body}</article>;
 }

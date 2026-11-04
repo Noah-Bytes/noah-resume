@@ -10,6 +10,7 @@ const nextConfig = {
 	async rewrites() {
 		return [
 			{ source: "/site.webmanifest", destination: "/manifest.webmanifest" },
+			{ source: "/favicon.ico", destination: "/favicon.svg" },
 		];
 	},
 };
