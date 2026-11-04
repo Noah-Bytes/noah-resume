@@ -48,6 +48,7 @@ export function NowSection() {
 							<>
 								{now.titlePrefix}
 								<span className="serif-italic text-accent">
+									{" "}
 									{profile.currentlyBuilding}
 								</span>
 								{now.titleSuffix}

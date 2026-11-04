@@ -42,9 +42,11 @@
 			"taglineCN": "11 年研发 · 6 年团队管理 · Electron 与全栈基础设施方向",
 			"location": "西安 · Xi'an",
 			"phoneDisplay": "159****9540",
+			"phone": "15968159540",
 			"email": "yangchen.xiyou@gmail.com",
 			"github": "https://github.com/Noah-Bytes",
 			"telegram": "https://t.me/tb_noah",
+			"x": "https://x.com/codebynoah",
 			"currentlyBuilding": "OpenMax 社区",
 			"summary": "拥有 11 年研发经验，长期负责 Electron、React、Next.js、NestJS 全栈系统架构与工程落地。业余参与 OpenMax 开源社区；此前深度参与分布式算力桌面、商家 SaaS 与 AI 工具从 0 到 1 建设。",
 			"manifesto": [
@@ -248,8 +250,9 @@
 		"projects": [
 			{
 				"name": "OpenMax 社区",
-				"role": "",
-				"period": "",
+				"role": "开源社区贡献",
+				"period": "2026 — 现在",
+				"url": "https://github.com/openmaxai",
 				"tagline": "开源社区 · Human × Agent",
 				"description": "人机协作相关的开源社区项目，覆盖 Web、桌面与移动端的客户端工程实践。",
 				"highlights": [
@@ -272,7 +275,7 @@
 				"role": "独立开发",
 				"period": "2026.05 — 2026.06",
 				"tagline": "Personal · Privacy · Knowledge graph",
-				"description": "仅面向个人的端侧产品：以隐私为前提搭建可用的知识图谱，数据优先留在本地，支撑关联检索与后续能力扩展；持续迭代中。",
+				"description": "仅面向个人的端侧产品：以隐私为前提搭建可用的知识图谱，数据优先留在本地，支撑关联检索与后续能力扩展；该阶段已交付并归档。",
 				"highlights": [
 					"个人场景专用，知识图谱与关系检索以隐私为边界设计",
 					"本地存储与图结构索引，压缩敏感数据外泄面"
@@ -284,6 +287,7 @@
 				"name": "分布式算力桌面",
 				"role": "Senior Full-stack / Electron Infrastructure Engineer",
 				"period": "2024.08 — 2026.05",
+				"url": "https://crowdcomputed.com/",
 				"tagline": "Electron Infrastructure · Plugin Runtime · AI Workflow",
 				"description": "面向分布式算力与 AI 工作流场景的 Electron 桌面基础设施，覆盖插件运行时、远程终端、云控制台、多端 Web 与 OpenAPI 文档体系。",
 				"highlights": [
@@ -660,10 +664,12 @@
 				"phone": "Phone · 电话",
 				"github": "GitHub",
 				"telegram": "Telegram · TG",
+				"x": "X · @codebynoah",
 				"location": "Location · 现居"
 			},
 			"githubDisplayPath": "github.com/Noah-Bytes",
 			"telegramDisplayPath": "t.me/tb_noah",
+			"xDisplayHandle": "@codebynoah",
 			"copyEmail": "复制邮箱",
 			"copyPhone": "复制电话",
 			"copyTelegram": "复制 Telegram"
@@ -678,7 +684,8 @@
 		"copyText": {
 			"copiedAria": "已复制",
 			"copyVerbPrefix": "复制",
-			"liveCopied": "已复制到剪贴板"
+			"liveCopied": "已复制到剪贴板",
+			"liveCopyFailed": "复制失败，请手动选择文本"
 		}
 	}
 }

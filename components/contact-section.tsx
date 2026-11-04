@@ -162,6 +162,33 @@ export function ContactSection() {
 						/>
 					</a>
 
+					{"x" in profile && profile.x ? (
+						<a
+							href={profile.x}
+							target="_blank"
+							rel="noreferrer"
+							className="group flex items-center justify-between gap-4 bg-card px-6 py-6 transition-colors hover:bg-card/70"
+						>
+							<div className="flex items-center gap-4">
+								<span className="grid size-10 place-items-center rounded-full bg-accent/12 font-mono text-sm font-semibold text-accent">
+									𝕏
+								</span>
+								<div className="flex flex-col">
+									<span className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+										{contact.labels.x}
+									</span>
+									<span className="link-underline text-sm">
+										{contact.xDisplayHandle}
+									</span>
+								</div>
+							</div>
+							<ArrowUpRight
+								className="size-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
+								aria-hidden
+							/>
+						</a>
+					) : null}
+
 					<div className="flex items-center justify-between gap-4 bg-card px-6 py-6 md:col-span-2">
 						<div className="flex items-center gap-4">
 							<span className="grid size-10 place-items-center rounded-full bg-accent/12 text-accent">

@@ -24,15 +24,18 @@ type Props = {
 
 export function CopyText({ value, label, className, notifyEvent }: Props) {
 	const [copied, setCopied] = React.useState(false);
+	const [failed, setFailed] = React.useState(false);
 
 	const handleCopy = async () => {
+		setFailed(false);
 		try {
 			await navigator.clipboard.writeText(value);
 			if (notifyEvent) notifyResumeEvent(notifyEvent, { copiedText: value });
 			setCopied(true);
 			window.setTimeout(() => setCopied(false), 1600);
 		} catch {
-			/* no-op */
+			setFailed(true);
+			window.setTimeout(() => setFailed(false), 2400);
 		}
 	};
 
@@ -63,7 +66,11 @@ export function CopyText({ value, label, className, notifyEvent }: Props) {
 				/>
 			)}
 			<span className="sr-only" aria-live="polite">
-				{copied ? copyText.liveCopied : ""}
+				{copied
+					? copyText.liveCopied
+					: failed
+						? copyText.liveCopyFailed
+						: ""}
 			</span>
 		</button>
 	);
